@@ -3,81 +3,193 @@
 import { motion, Variants, useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
+import { luxuryvisiondesktop } from "@/assets/inedex"
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.28,
-            delayChildren: 0.18,
+            staggerChildren: 0.2,
+            delayChildren: 0.1,
         },
     },
 }
 
 const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 60, rotateX: 15 },
     visible: {
         opacity: 1,
         y: 0,
+        rotateX: 0,
         transition: {
-            duration: 0.8,
+            duration: 0.9,
+            ease: "easeOut",
         },
     },
 }
 
 const imageVariants: Variants = {
-    hidden: { opacity: 0, scale: 1.05 },
+    hidden: { opacity: 0, scale: 1.1, rotateY: 5 },
     visible: {
         opacity: 1,
         scale: 1,
+        rotateY: 0,
         transition: {
-            duration: 1.1,
+            duration: 1.2,
+            ease: "easeOut",
+        },
+    },
+}
+
+const textRevealVariants: Variants = {
+    hidden: {
+        opacity: 0,
+        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)"
+    },
+    visible: {
+        opacity: 1,
+        clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0% 100%)",
+        transition: {
+            duration: 1.2,
+            ease: "easeOut",
+            delay: 0.3
         },
     },
 }
 
 export default function LuxuryVisionSection() {
     const ref = useRef<HTMLElement | null>(null)
-    const isInView = useInView(ref, { once: true, margin: "-100px" })
+    const isInView = useInView(ref, { once: true, margin: "-80px" })
 
     return (
-        <section ref={ref} className="py-20 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section ref={ref} className="py-32 bg-white relative overflow-hidden">
+            {/* Abstract geometric background */}
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-64 -right-64 w-96 h-96 bg-black opacity-5 transform rotate-12"></div>
+                <div className="absolute -bottom-64 -left-64 w-96 h-96 bg-black opacity-5 transform rotate-45"></div>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-px h-full bg-black opacity-10"></div>
+            </div>
+
+            <div className="container mx-auto px-4 relative">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="max-w-6xl mx-auto"
+                    className="max-w-7xl mx-auto"
                 >
-                    <motion.h2
-                        variants={itemVariants}
-                        className="font-serif text-center mb-12 text-neutral-800 leading-tight"
-                        style={{ fontSize: 'clamp(1.75rem, 4.5vw, 3.5rem)' }}
-                    >
-                        Belvo Realty epitomizes unrivaled luxury, timeless elegance and trailblazing innovation — redefining the realm
-                        of modern real estate.
-                    </motion.h2>
+                    {/* Header Section */}
+                    <div className="text-center mb-20">
+                        <motion.div variants={itemVariants} className="mb-8">
+                            <div className="flex items-center justify-center mb-6">
+                                <div className="w-12 h-px bg-black"></div>
+                                <div className="mx-4 w-1 h-1 bg-black transform rotate-45"></div>
+                                <div className="w-12 h-px bg-black"></div>
+                            </div>
+                            <span className="text-xs tracking-[0.3em] uppercase font-bold text-black">LUXURY REDEFINED</span>
+                        </motion.div>
 
+                        <motion.h2
+                            variants={textRevealVariants}
+                            className="font-black text-black leading-[0.9] mb-8"
+                            style={{ fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
+                        >
+                            BELVO REALTY<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-black via-gray-600 to-black">
+                                EPITOMIZES
+                            </span><br />
+                            UNRIVALED LUXURY
+                        </motion.h2>
+
+                        <motion.div variants={itemVariants} className="flex items-center justify-center space-x-8 mb-12">
+                            <div className="text-center">
+                                <div className="w-px h-16 bg-black mx-auto mb-2"></div>
+                                <span className="text-xs uppercase tracking-widest font-bold">TIMELESS</span>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-px h-16 bg-black mx-auto mb-2"></div>
+                                <span className="text-xs uppercase tracking-widest font-bold">ELEGANCE</span>
+                            </div>
+                            <div className="text-center">
+                                <div className="w-px h-16 bg-black mx-auto mb-2"></div>
+                                <span className="text-xs uppercase tracking-widest font-bold">INNOVATION</span>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Image Section */}
                     <motion.div
                         variants={imageVariants}
-                        className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-2xl shadow-xl"
+                        className="relative group mb-20"
                     >
-                        <Image
-                            src="/luxury-vision-desktop.jpg"
-                            alt="Luxury architectural vision in desert landscape"
-                            fill
-                            className="object-cover"
-                            priority={false}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                        {/* Image Container */}
+                        <div className="relative aspect-[16/8] md:aspect-[21/8] overflow-hidden bg-black">
+                            <Image
+                                src={luxuryvisiondesktop}
+                                alt="Luxury architectural vision"
+                                fill
+                                className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                                priority={false}
+                            />
+
+                            {/* Overlay gradients */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20"></div>
+
+                            {/* Corner frames */}
+                            <div className="absolute top-0 left-0 w-16 h-16 border-l-4 border-t-4 border-white opacity-60"></div>
+                            <div className="absolute top-0 right-0 w-16 h-16 border-r-4 border-t-4 border-white opacity-60"></div>
+                            <div className="absolute bottom-0 left-0 w-16 h-16 border-l-4 border-b-4 border-white opacity-60"></div>
+                            <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-white opacity-60"></div>
+                        </div>
+
+                        {/* Image overlay text */}
+                        <div className="absolute bottom-8 left-8 right-8">
+                            <div className="flex items-end justify-between">
+                                <div>
+                                    <div className="w-12 h-px bg-white mb-4"></div>
+                                    <p className="text-white font-bold text-lg tracking-wider uppercase">ARCHITECTURAL MASTERY</p>
+                                </div>
+                                <div className="text-right">
+                                    <p className="text-white opacity-80 text-sm">DEFINING THE FUTURE</p>
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
 
-                    <motion.div variants={itemVariants} className="mt-10 text-center">
-                        <p className="text-lg md:text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
-                            Where architectural mastery meets infinite possibilities, creating landmarks that define the future of
-                            luxury living and commercial excellence.
-                        </p>
+                    {/* Bottom Content */}
+                    <motion.div variants={itemVariants} className="text-center">
+                        <div className="max-w-5xl mx-auto">
+                            <div className="grid md:grid-cols-3 gap-12 mb-16">
+                                <div>
+                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                        <div className="w-2 h-2 bg-white"></div>
+                                    </div>
+                                    <h3 className="font-bold text-xl mb-3 text-black">INFINITE POSSIBILITIES</h3>
+                                    <p className="text-gray-600 leading-relaxed">Creating landmarks that transcend conventional boundaries</p>
+                                </div>
+                                <div>
+                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                        <div className="w-2 h-2 bg-white"></div>
+                                    </div>
+                                    <h3 className="font-bold text-xl mb-3 text-black">LUXURY LIVING</h3>
+                                    <p className="text-gray-600 leading-relaxed">Redefining standards of premium residential excellence</p>
+                                </div>
+                                <div>
+                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                        <div className="w-2 h-2 bg-white"></div>
+                                    </div>
+                                    <h3 className="font-bold text-xl mb-3 text-black">COMMERCIAL EXCELLENCE</h3>
+                                    <p className="text-gray-600 leading-relaxed">Setting new benchmarks in business infrastructure</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-center space-x-8">
+                                <div className="w-24 h-px bg-black"></div>
+                                <span className="text-black font-bold text-sm tracking-[0.2em] uppercase">MODERN REAL ESTATE</span>
+                                <div className="w-24 h-px bg-black"></div>
+                            </div>
+                        </div>
                     </motion.div>
                 </motion.div>
             </div>
