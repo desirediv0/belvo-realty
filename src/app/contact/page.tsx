@@ -4,7 +4,7 @@ import { useState } from "react"
 import { motion, Variants } from "framer-motion"
 import HeroPage from "@/components/HeroPage"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
+// Image removed: using embedded Google Maps iframe for location
 import HeadText from "@/components/Head-text"
 
 const container: Variants = {
@@ -102,7 +102,16 @@ export default function ContactPage() {
                             <div className="mt-6">
                                 <h4 className="font-semibold mb-4">Location</h4>
                                 <div className="w-full rounded-lg overflow-hidden shadow">
-                                    <Image src="/luxury-vision-desktop.jpg" alt="Office map" width={1200} height={700} className="object-cover w-full h-48 sm:h-64" />
+                                    <div className="w-full h-48 sm:h-64">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.7503835881284!2d76.96075877528284!3d28.47086987575338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d17957da3b1e7%3A0xe31b6d39c72cc555!2sDesire%20Div%20%7C%20Website%20Designing%20Company%20in%20Gurgaon!5e1!3m2!1sen!2sin!4v1758627903013!5m2!1sen!2sin"
+                                            title="Belvo Realty Office Location"
+                                            className="w-full h-full border-0"
+                                            allowFullScreen
+                                            loading="lazy"
+                                            referrerPolicy="no-referrer-when-downgrade"
+                                        ></iframe>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
@@ -110,21 +119,35 @@ export default function ContactPage() {
                         <motion.div variants={item} className="p-6 border rounded-lg bg-gray-50">
                             <h3 className="text-2xl font-bold mb-4">Send Us a Message</h3>
 
-                            <form onSubmit={handleSubmit} className="grid gap-4">
+                            <form onSubmit={handleSubmit} className="grid gap-4" aria-live="polite">
                                 <div className="grid sm:grid-cols-2 gap-4">
-                                    <input name="name" className="p-3 border rounded" placeholder="Your name" />
-                                    <input name="email" type="email" className="p-3 border rounded" placeholder="Email address" />
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-medium mb-1">Full name</label>
+                                        <input id="name" name="name" required className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Your full name" />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium mb-1">Email address</label>
+                                        <input id="email" name="email" type="email" required className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="you@example.com" />
+                                    </div>
                                 </div>
 
-                                <input name="phone" className="p-3 border rounded" placeholder="Phone (optional)" />
+                                <div>
+                                    <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone (optional)</label>
+                                    <input id="phone" name="phone" type="tel" className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="+91 12345 67890" />
+                                    <p className="text-xs text-gray-500 mt-1">We&apos;ll only use this to contact you about your enquiry.</p>
+                                </div>
 
-                                <textarea name="message" className="p-3 border rounded min-h-[140px]" placeholder="Your message" />
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
+                                    <textarea id="message" name="message" required className="p-3 border rounded min-h-[140px] w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Tell us a bit about what you're looking for (budget, location, timelines)" />
+                                </div>
 
-                                {error && <div className="text-sm text-red-600">{error}</div>}
-                                {status === "sent" && <div className="text-sm text-green-700">Message sent. We will contact you soon.</div>}
+                                {error && <div role="alert" className="text-sm text-red-600">{error}</div>}
+                                {status === "sent" && <div role="status" className="text-sm text-green-700">Message sent. We will contact you soon.</div>}
 
                                 <div className="pt-2">
-                                    <Button type="submit" className="bg-slate-900 text-white px-6 py-3">{status === "sending" ? "Sending..." : "Send Message"}</Button>
+                                    <Button type="submit" disabled={status === "sending"} className="bg-slate-900 text-white px-6 py-3">{status === "sending" ? "Sending..." : "Send Message"}</Button>
                                 </div>
 
                             </form>
