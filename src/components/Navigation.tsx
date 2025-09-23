@@ -14,23 +14,19 @@ import {
     IconHome,
     IconInfoCircle,
     IconBuildingSkyscraper,
-    IconCalendarEvent,
-    IconAward,
     IconPhone,
-    IconArticle
 } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import Link from "next/link";
+import Image from "next/image";
+import { logo } from "@/assets/inedex";
 
 
 const menuItems = [
     { name: "Home", link: "/", icon: IconHome },
     { name: "About Us", link: "/about", icon: IconInfoCircle },
     { name: "Projects", link: "/projects", icon: IconBuildingSkyscraper },
-    { name: "News & Events", link: "/news-events", icon: IconCalendarEvent },
-    { name: "Awards", link: "/awards", icon: IconAward },
     { name: "Contact", link: "/contact", icon: IconPhone },
-    { name: "Blog", link: "/blog", icon: IconArticle },
 ];
 
 const contactNumber = () => {
@@ -83,8 +79,12 @@ const Navigation = () => {
             className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 font-serif  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
         >
             <Link href={"/"} className="flex items-center gap-2">
-                {/* <Image src={logo} alt="Belvo Realty" width={100} height={100} /> */}
-                <div className="font-serif text-2xl lg:text-3xl font-normal text-white">Belvo Realty</div>
+                <Image src={logo} alt="Belvo Realty" width={
+                    scrolled ? 55 : 80
+                } height={
+                    scrolled ? 55 : 80
+                } className="rounded-full" />
+                {/* <div className="font-serif text-2xl lg:text-3xl font-normal text-white">Belvo Realty</div> */}
             </Link>
             <div className="flex items-center gap-2 md:gap-6">
                 <button
@@ -131,6 +131,7 @@ const Navigation = () => {
                                                     href={item.link}
                                                     className="flex items-center gap-3 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400"
                                                     aria-label={item.name}
+                                                    onClick={() => setSheetOpen(false)}
                                                 >
                                                     <Icon size={24} className="text-white" />
                                                     <span className="text-white text-lg font-semibold">{item.name}</span>

@@ -1,4 +1,4 @@
-import logo from "./logo.png";
+import logo from "./logo.jpg";
 
 import modernluxuryrealestateofficeinteriorwithmar from "./modern-luxury-real-estate-office-interior-with-mar.webp";
 import ShowcaseSection from "./ShowcaseSection.jpg";
