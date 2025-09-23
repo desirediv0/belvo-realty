@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans ${libreCaslonDisplay.variable} ${poppins.variable} antialiased`}
+        className={`font-sans ${libreCaslonDisplay.variable} ${poppins.variable} antialiased overflow-x-hidden`}
       >
         <Suspense fallback={null}>
           <Navigation />

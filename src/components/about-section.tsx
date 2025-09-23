@@ -2,8 +2,9 @@
 
 import { modernluxuryrealestateofficeinteriorwithmar } from "@/assets/inedex"
 import { motion } from "framer-motion"
-import { FaHome, FaBuilding, FaHotel } from "react-icons/fa"
+import { FaHome, FaBuilding } from "react-icons/fa"
 import Image from "next/image"
+import { PiCallBellBold } from "react-icons/pi"
 
 const AboutSection = () => {
     const containerVariants = {
@@ -91,9 +92,9 @@ const AboutSection = () => {
             description: "Office spaces and retail",
         },
         {
-            icon: FaHotel,
+            icon: PiCallBellBold,
             title: "Hospitality",
-            description: "Hotels and resorts",
+            description: "Hotels and resorts and more",
         },
     ]
 
