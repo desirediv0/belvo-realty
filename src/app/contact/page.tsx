@@ -57,8 +57,8 @@ export default function ContactPage() {
             />
 
             <section className="py-16 bg-white relative overflow-hidden">
-                {/* Background pattern */}
-                <div className="absolute inset-0 opacity-5">
+                {/* Background pattern (decorative) - make non-interactive so inputs are reachable */}
+                <div className="absolute inset-0 opacity-5 pointer-events-none" aria-hidden="true">
                     <div className="absolute top-0 right-0 w-96 h-96 bg-black transform rotate-45 translate-x-48 -translate-y-48"></div>
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-black transform rotate-12 -translate-x-48 translate-y-48"></div>
                 </div>

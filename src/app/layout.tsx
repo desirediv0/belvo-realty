@@ -3,6 +3,7 @@ import { Libre_Caslon_Display, Poppins } from "next/font/google"
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { Suspense } from "react"
 
 const libreCaslonDisplay = Libre_Caslon_Display({
@@ -38,6 +39,7 @@ export default function RootLayout({
           {children}
 
           <Footer />
+          <WhatsAppButton />
         </Suspense>
 
       </body>
