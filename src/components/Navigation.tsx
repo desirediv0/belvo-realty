@@ -111,7 +111,7 @@ const Navigation = () => {
                     </SheetTrigger>
                     <SheetContent className="w-72 md:w-96 bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl">
                         <SheetHeader>
-                            <SheetTitle className="text-2xl font-bold text-gray-200 mb-2">Navigation</SheetTitle>
+                            <SheetTitle className="text-2xl font-bold text-gray-200 mb-2">Belvo Realty</SheetTitle>
                             <SheetDescription>
                                 <motion.div
                                     className="flex flex-col gap-3 mt-4"
