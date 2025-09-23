@@ -189,15 +189,15 @@ export default function ProjectsPage() {
 
                                         {/* Main content */}
                                         <div className="transform transition-transform duration-300 group-hover:translate-y-0 translate-y-4">
-                                            <h3 className="text-2xl font-bold mb-2 leading-tight">{img.title}</h3>
+                                            <h3 className="text-lg md:text-2xl font-bold mb-2 leading-tight">{img.title}</h3>
 
                                             <div className="flex items-center mb-3">
                                                 <MapPin className="w-4 h-4 mr-2 opacity-80" />
-                                                <span className="text-sm opacity-90">{img.location}</span>
+                                                <span className="text-xs md:text-sm opacity-90">{img.location}</span>
                                             </div>
 
                                             {/* Additional info that appears on hover */}
-                                            <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                                            <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 md:block hidden ">
                                                 <div className="flex items-center justify-between text-xs mb-4">
                                                     <div className="flex items-center">
                                                         <Calendar className="w-3 h-3 mr-1" />
