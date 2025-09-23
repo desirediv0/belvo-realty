@@ -80,7 +80,7 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
+            className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 font-serif  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
         >
             <Link href={"/"} className="flex items-center gap-2">
                 {/* <Image src={logo} alt="Belvo Realty" width={100} height={100} /> */}
@@ -109,7 +109,7 @@ const Navigation = () => {
                             <IconMenuDeep size={26} />
                         </motion.button>
                     </SheetTrigger>
-                    <SheetContent className="w-72 md:w-96 bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl">
+                    <SheetContent className="w-72 md:w-96 bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl ">
                         <SheetHeader>
                             <SheetTitle className="text-2xl font-bold text-gray-200 mb-2">Belvo Realty</SheetTitle>
                             <SheetDescription>
