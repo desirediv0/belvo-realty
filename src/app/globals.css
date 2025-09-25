@@ -75,4 +75,23 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Use the CSS variables injected by next/font/local */
+  body {
+    font-family: var(--font-poppins, 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue');
+  }
+
+  h1, h2, h3, h4, h5, h6, .hero-heading {
+    font-family: var(--font-libre-caslon, 'Libre Caslon Display', Georgia, 'Times New Roman', serif);
+    /* ensure strong weight for display headings */
+    font-weight: 700;
+  }
+
+  /* Utility classes to apply local fonts anywhere */
+  .libreCaslonDisplay, .font-libre-caslon {
+    font-family: var(--font-libre-caslon, 'Libre Caslon Display', Georgia, 'Times New Roman', serif) !important;
+  }
+
+  .poppinsDisplay, .font-poppins {
+   font-family: var(--font-libre-caslon, 'Libre Caslon Display', Georgia, 'Times New Roman', serif) !important;
+  }
 }

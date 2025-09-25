@@ -41,7 +41,7 @@ export default function LuxuryVisionSection() {
 
                         <motion.h2
                             variants={item}
-                            className="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight text-slate-900"
+                            className="libreCaslonDisplay text-3xl md:text-4xl lg:text-5xl leading-tight text-slate-900"
                             style={{ fontSize: 'clamp(1.75rem, 4.5vw, 3.5rem)' }}
                         >
                             Crafting Enduring Value Through Thoughtful Luxury

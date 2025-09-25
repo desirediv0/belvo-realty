@@ -30,7 +30,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.4 }}
-                        className="font-serif font-normal text-white mb-8 leading-tight text-balance text-center"
+                        className="libreCaslonDisplay font-normal text-white mb-8 leading-tight text-balance text-center"
                         style={{ fontSize: 'clamp(2.25rem, 8vw, 6.5rem)' }}
                     >
                         BELVO REALTY
@@ -83,17 +83,17 @@ const Hero = () => {
             >
                 <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-4">
                     <div>
-                        <div className="font-serif text-2xl font-normal text-white">50+</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">50+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Projects</div>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="font-serif text-2xl font-normal text-white">₹16,600 Cr+</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">₹16,600 Cr+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Portfolio Value</div>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="font-serif text-2xl font-normal text-white">15</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">15</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Years</div>
                     </div>
                 </div>

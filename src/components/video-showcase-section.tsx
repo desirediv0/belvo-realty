@@ -83,7 +83,7 @@ const VideoShowcaseSection = () => {
 
                     <motion.h2
                         variants={itemVariants}
-                        className="font-serif text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide"
+                        className="libreCaslonDisplay text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide"
                     >
                         BELVO REALTY
                     </motion.h2>

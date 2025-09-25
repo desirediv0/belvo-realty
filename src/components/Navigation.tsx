@@ -75,7 +75,7 @@ const Navigation = () => {
 
     return (
         <nav
-            className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 font-serif  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
+            className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 libreCaslonDisplay  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
         >
             <Link href={"/"} className="flex items-center gap-2">
                 <Image src={"/logo.svg"} alt="Belvo Realty" width={
@@ -83,7 +83,7 @@ const Navigation = () => {
                 } height={
                     scrolled ? 55 : 80
                 } className="rounded-full" />
-                {/* <div className="font-serif text-2xl lg:text-3xl font-normal text-white">Belvo Realty</div> */}
+                {/* <div className="libreCaslonDisplay text-2xl lg:text-3xl font-normal text-white">Belvo Realty</div> */}
             </Link>
             <div className="flex items-center gap-2 md:gap-6">
                 <button

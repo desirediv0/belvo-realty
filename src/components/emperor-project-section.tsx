@@ -88,7 +88,7 @@ export default function EmperorProjectSection() {
                                         Flagship Project
                                     </span>
                                 </motion.div>
-                                <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-neutral-800 leading-tight text-balance">
+                                <h2 className="text-4xl md:text-5xl lg:text-6xl libreCaslonDisplay text-neutral-800 leading-tight text-balance">
                                     Belvo The Emperor
                                 </h2>
                                 <p className="text-xl text-neutral-600 leading-relaxed">

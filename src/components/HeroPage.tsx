@@ -60,7 +60,7 @@ function HeroPage({
                             initial={{ opacity: 0, y: 40, scale: 0.95 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ duration: 0.9 }}
-                            className="font-black text-white leading-[0.9] mb-6 tracking-tight font-serif"
+                            className="font-black text-white leading-[0.9] mb-6 tracking-tight libreCaslonDisplay"
                             style={{ fontSize: 'clamp(2rem, 6.5vw, 5rem)' }}
                         >
                             {heading ?? defaultHeading}

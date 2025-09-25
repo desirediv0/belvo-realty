@@ -47,7 +47,7 @@ const HeadText = ({
         >
             <motion.div variants={lineVariants} className="mx-auto mb-6 h-px bg-black" />
 
-            <motion.span variants={item} className="text-xs tracking-[0.3em] uppercase font-bold text-black mb-5 block">
+            <motion.span variants={item} className="text-xs tracking-[0.3em] uppercase font-bold text-black mb-5 block libreCaslonDisplay">
                 {heading}
             </motion.span>
 

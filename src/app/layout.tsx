@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Libre_Caslon_Display, Poppins } from "next/font/google"
+
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Suspense } from "react"
+import localFont from "next/font/local"
 
-const libreCaslonDisplay = Libre_Caslon_Display({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-libre-caslon-display',
+const libreCaslonDisplay = localFont({
+  src: "./fonts/LibreCaslonDisplay-Regular.ttf",
+  variable: "--font-libre-caslon",
+  weight: "400"
 })
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
-  variable: '--font-poppins',
+const poppins = localFont({
+  src: "./fonts/Poppins-Regular.ttf",
+  variable: "--font-poppins",
+  weight: "400"
 })
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-sans ${libreCaslonDisplay.variable} ${poppins.variable} antialiased overflow-x-hidden`}
+        className={`${libreCaslonDisplay.variable} ${poppins.variable} antialiased overflow-x-hidden`}
       >
         <Suspense fallback={null}>
           <Navigation />

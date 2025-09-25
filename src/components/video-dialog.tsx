@@ -55,7 +55,7 @@ const VideoDialog = ({ children, videoSrc, title }: VideoDialogProps) => {
                 </div>
                 {title && (
                     <div className="p-4 bg-black text-white">
-                        <h3 className="font-serif text-lg">{title}</h3>
+                        <h3 className="libreCaslonDisplay text-lg">{title}</h3>
                     </div>
                 )}
             </DialogContent>

@@ -123,7 +123,7 @@ const AboutSection = () => {
                             <div className="absolute inset-0 bg-black/25 flex items-center justify-center">
                                 <motion.div
                                     variants={logoVariants}
-                                    className="text-white font-serif text-5xl md:text-6xl font-light tracking-widest uppercase opacity-95"
+                                    className="text-white libreCaslonDisplay text-5xl md:text-6xl font-light tracking-widest uppercase opacity-95"
                                 >
                                     belvo
                                 </motion.div>
@@ -143,7 +143,7 @@ const AboutSection = () => {
 
                             <motion.h2
                                 variants={itemVariants}
-                                className="font-serif text-4xl   leading-tight text-balance"
+                                className="libreCaslonDisplay text-4xl   leading-tight text-balance"
                             >
                                 Belvo Realty Redefines Luxury In The World Of Real Estate With The Most Exclusive Residential,
                                 Commercial & Hospitality Projects.
