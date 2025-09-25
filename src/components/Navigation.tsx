@@ -19,7 +19,6 @@ import {
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
-import { logo } from "@/assets/inedex";
 
 
 const menuItems = [
@@ -79,7 +78,7 @@ const Navigation = () => {
             className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 font-serif  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
         >
             <Link href={"/"} className="flex items-center gap-2">
-                <Image src={logo} alt="Belvo Realty" width={
+                <Image src={"/logo.svg"} alt="Belvo Realty" width={
                     scrolled ? 55 : 80
                 } height={
                     scrolled ? 55 : 80

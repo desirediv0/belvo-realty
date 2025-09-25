@@ -81,16 +81,16 @@ export default function ContactPage() {
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div className="p-6 border rounded-lg">
                                     <h4 className="font-semibold mb-2">Sales Office</h4>
-                                    <p className="text-sm text-gray-600">Sector 106, Gurugram</p>
-                                    <a href="tel:1234567890" className="text-sm text-slate-900 block mt-2">+91 12345 67890</a>
-                                    <a href="mailto:sales@belvo.com" className="text-sm text-slate-900 block mt-1">sales@belvo.com</a>
+                                    <p className="text-sm text-gray-600">Office No.- 649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</p>
+                                    <a href="tel:+919090939193" className="text-sm text-slate-900 block mt-2">+91 9090 939193</a>
+                                    <a href="mailto:hello@belvorealty.com" className="text-sm text-slate-900 block mt-1">hello@belvorealty.com</a>
                                 </div>
 
                                 <div className="p-6 border rounded-lg">
                                     <h4 className="font-semibold mb-2">Head Office</h4>
-                                    <p className="text-sm text-gray-600">Gurugram, Haryana</p>
-                                    <a href="tel:0987654321" className="text-sm text-slate-900 block mt-2">+91 09876 54321</a>
-                                    <a href="mailto:info@belvo.com" className="text-sm text-slate-900 block mt-1">info@belvo.com</a>
+                                    <p className="text-sm text-gray-600">Office No.- 649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</p>
+                                    <a href="tel:+919090939193" className="text-sm text-slate-900 block mt-2">+91 9090 939193</a>
+                                    <a href="mailto:hello@belvorealty.com" className="text-sm text-slate-900 block mt-1">hello@belvorealty.com</a>
                                 </div>
                             </div>
 
