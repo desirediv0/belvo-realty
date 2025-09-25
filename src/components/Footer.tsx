@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
             {/* Background Image */}
             <div className="absolute inset-0 opacity-20">
                 <div className="w-full h-full bg-gradient-to-br from-black via-black to-black" />
-                <div className="absolute inset-0 bg-[url('/modern-architectural-glass-structure-geometric-pat.jpg')] bg-cover bg-center opacity-30" />
+                <div className="absolute inset-0 bg-[url('/modern-architectural-glass-structure-geometric-pat.jpg')] bg-cover bg-center opacity-40" />
             </div>
 
             <motion.div
