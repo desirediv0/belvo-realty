@@ -75,7 +75,7 @@ export default function AboutPage() {
                                 <div className="inline-block px-4 py-2 bg-black text-white text-sm font-medium mb-6 uppercase tracking-wider">
                                     Meet the Founders
                                 </div>
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4">Leadership Excellence</h2>
+                                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#bf9b30]">Leadership Excellence</h2>
                                 <p className="text-gray-600 text-lg">Experience and expertise that drives our success</p>
                             </div>
 
@@ -86,11 +86,11 @@ export default function AboutPage() {
                                     className="p-8 border border-black bg-white hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start gap-6 mb-6">
-                                        <div className="w-20 h-20 bg-black text-white flex items-center justify-center text-2xl font-bold">
+                                        <div className="w-20 h-20 bg-[#bf9b30] text-white flex items-center justify-center text-2xl font-bold">
                                             RV
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-2xl font-bold mb-2">Ravi Verma</h3>
+                                            <h3 className="text-2xl font-bold mb-2 text-black">Ravi Verma</h3>
                                             <div className="flex items-center gap-2 text-black font-medium mb-4">
                                                 <Award className="w-5 h-5" />
                                                 Founder
@@ -117,11 +117,11 @@ export default function AboutPage() {
                                     className="p-8 border border-black bg-white hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start gap-6 mb-6">
-                                        <div className="w-20 h-20 bg-black text-white flex items-center justify-center text-xl font-bold">
+                                        <div className="w-20 h-20 bg-[#bf9b30] text-white flex items-center justify-center text-xl font-bold">
                                             BSV
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="text-2xl font-bold mb-2">Bhoomika Singh Verma</h3>
+                                            <h3 className="text-2xl font-bold mb-2 text-black">Bhoomika Singh Verma</h3>
                                             <div className="flex items-center gap-2 text-black font-medium mb-4">
                                                 <Heart className="w-5 h-5" />
                                                 Co-Founder
@@ -149,10 +149,10 @@ export default function AboutPage() {
                             {/* Vision */}
                             <div className="p-8 border border-black bg-white">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                                    <div className="w-12 h-12 bg-[#bf9b30] text-white flex items-center justify-center">
                                         <Eye className="w-6 h-6" />
                                     </div>
-                                    <h3 className="text-2xl font-bold">Our Vision</h3>
+                                    <h3 className="text-2xl font-bold text-black">Our Vision</h3>
                                 </div>
                                 <p className="text-gray-700 leading-relaxed text-lg">
                                     To be the most trusted and forward-looking real estate partner, where every client feels empowered, informed, and secure in their property decisions. We envision a future where real estate is not just about spaces, but about building confidence, opportunities, and lasting relationships.
@@ -162,26 +162,26 @@ export default function AboutPage() {
                             {/* Mission */}
                             <div className="p-8 border border-black bg-white">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center">
+                                    <div className="w-12 h-12 bg-[#bf9b30] text-white flex items-center justify-center">
                                         <Target className="w-6 h-6" />
                                     </div>
-                                    <h3 className="text-2xl font-bold">Our Mission</h3>
+                                    <h3 className="text-2xl font-bold text-black">Our Mission</h3>
                                 </div>
                                 <ul className="space-y-3 text-gray-700">
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-black mt-2 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-[#bf9b30] mt-2 flex-shrink-0"></div>
                                         <span>Create a client experience rooted in clarity, professionalism, and care</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-black mt-2 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-[#bf9b30] mt-2 flex-shrink-0"></div>
                                         <span>Guide every property journey with insight, foresight, and responsibility</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-black mt-2 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-[#bf9b30] mt-2 flex-shrink-0"></div>
                                         <span>Shape real estate as a service industry that delivers value beyond transactions</span>
                                     </li>
                                     <li className="flex items-start gap-3">
-                                        <div className="w-2 h-2 bg-black mt-2 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-[#bf9b30] mt-2 flex-shrink-0"></div>
                                         <span>Continually adapt and innovate, keeping our clients ahead in a changing market</span>
                                     </li>
                                 </ul>
@@ -194,13 +194,13 @@ export default function AboutPage() {
                                 <div className="inline-block px-4 py-2 bg-black text-white text-sm font-medium mb-6 uppercase tracking-wider">
                                     Why Choose Us
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-bold mb-4">The Belvo Advantage</h3>
+                                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-[#bf9b30]">The Belvo Advantage</h3>
                                 <p className="text-gray-600 text-lg">Founded on real experience and driven by trust</p>
                             </div>
 
                             <div className="grid md:grid-cols-3 gap-8">
                                 <div className="p-8 border border-black bg-white hover:shadow-lg transition-all duration-300">
-                                    <div className="w-16 h-16 bg-black text-white flex items-center justify-center mb-6">
+                                    <div className="w-16 h-16 bg-[#bf9b30] text-white flex items-center justify-center mb-6">
                                         <Award className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-xl font-bold mb-4">Insider Knowledge</h4>
@@ -210,7 +210,7 @@ export default function AboutPage() {
                                 </div>
 
                                 <div className="p-8 border border-black bg-white hover:shadow-lg transition-all duration-300">
-                                    <div className="w-16 h-16 bg-black text-white flex items-center justify-center mb-6">
+                                    <div className="w-16 h-16 bg-[#bf9b30] text-white flex items-center justify-center mb-6">
                                         <TrendingUp className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-xl font-bold mb-4">Smarter Evaluations</h4>
@@ -220,7 +220,7 @@ export default function AboutPage() {
                                 </div>
 
                                 <div className="p-8 border border-black bg-white hover:shadow-lg transition-all duration-300">
-                                    <div className="w-16 h-16 bg-black text-white flex items-center justify-center mb-6">
+                                    <div className="w-16 h-16 bg-[#bf9b30] text-white flex items-center justify-center mb-6">
                                         <Shield className="w-8 h-8" />
                                     </div>
                                     <h4 className="text-xl font-bold mb-4">Seamless Transactions</h4>
@@ -261,7 +261,7 @@ export default function AboutPage() {
                             <h3 className="text-2xl font-bold mb-8 text-center">What We Do</h3>
                             <div className="grid md:grid-cols-3 gap-6">
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
-                                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-4">
+                                    <div className="w-12 h-12 bg-[#bf9b30] text-white flex items-center justify-center mb-4">
                                         <Target className="w-6 h-6" />
                                     </div>
                                     <h4 className="font-semibold mb-2">Market Analysis & Strategy</h4>
@@ -269,7 +269,7 @@ export default function AboutPage() {
                                 </div>
 
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
-                                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-4">
+                                    <div className="w-12 h-12 bg-[#bf9b30] text-white flex items-center justify-center mb-4">
                                         <Users className="w-6 h-6" />
                                     </div>
                                     <h4 className="font-semibold mb-2">Property Advisory</h4>
@@ -277,7 +277,7 @@ export default function AboutPage() {
                                 </div>
 
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
-                                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-4">
+                                    <div className="w-12 h-12 bg-[#bf9b30] text-white flex items-center justify-center mb-4">
                                         <Heart className="w-6 h-6" />
                                     </div>
                                     <h4 className="font-semibold mb-2">Investment Solutions</h4>

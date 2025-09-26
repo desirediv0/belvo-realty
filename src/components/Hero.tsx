@@ -31,13 +31,13 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.4 }}
                         className="libreCaslonDisplay font-normal text-white mb-8 leading-tight text-balance text-center"
-                        style={{ fontSize: 'clamp(2.25rem, 8vw, 6.5rem)' }}
+                        style={{ fontSize: 'clamp(2.25rem, 8vw, 5.5rem)' }}
                     >
                         BELVO REALTY
                     </motion.h1>
 
                     {/* Description */}
-                    <motion.p
+                    {/* <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
@@ -46,7 +46,7 @@ const Hero = () => {
                     >
                         Crafting exceptional living spaces where architectural innovation meets timeless elegance. Discover your
                         next luxury investment opportunity.
-                    </motion.p>
+                    </motion.p> */}
 
                     {/* CTA Buttons */}
                     <motion.div
@@ -79,9 +79,9 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="absolute bottom-8 left-0 transform -translate-x-1/2 z-20 w-full px-4"
+                className="absolute bottom-10 md:bottom-28 left-0 transform -translate-x-1/2 z-20 w-full px-4"
             >
-                <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-6 md:gap-4">
                     <div>
                         <div className="libreCaslonDisplay text-2xl font-normal text-white">50+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Projects</div>

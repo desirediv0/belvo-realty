@@ -82,11 +82,11 @@ export default function LuxuryVisionSection() {
                     <div className="text-center mb-20">
                         <motion.div variants={itemVariants} className="mb-8">
                             <div className="flex items-center justify-center mb-6">
-                                <div className="w-12 h-px bg-black"></div>
-                                <div className="mx-4 w-1 h-1 bg-black transform rotate-45"></div>
-                                <div className="w-12 h-px bg-black"></div>
+                                <div className="w-12 h-px bg-[#bf9b30]"></div>
+                                <div className="mx-4 w-1 h-1 bg-[#bf9b30] transform rotate-45"></div>
+                                <div className="w-12 h-px bg-[#bf9b30]"></div>
                             </div>
-                            <span className="text-xs tracking-[0.3em] uppercase font-bold text-black">LUXURY REDEFINED</span>
+                            <span className="text-xs tracking-[0.3em] uppercase font-bold text-[#bf9b30]">LUXURY REDEFINED</span>
                         </motion.div>
 
                         <motion.h2
@@ -162,32 +162,32 @@ export default function LuxuryVisionSection() {
                         <div className="max-w-5xl mx-auto">
                             <div className="grid md:grid-cols-3 gap-12 mb-16">
                                 <div>
-                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-[#bf9b30] mx-auto mb-4 flex items-center justify-center">
                                         <div className="w-2 h-2 bg-white"></div>
                                     </div>
-                                    <h3 className="font-bold text-xl mb-3 text-black">INFINITE POSSIBILITIES</h3>
+                                    <h3 className="font-bold text-xl mb-3 text-[#bf9b30]">INFINITE POSSIBILITIES</h3>
                                     <p className="text-gray-600 leading-relaxed">Creating landmarks that transcend conventional boundaries</p>
                                 </div>
                                 <div>
-                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-[#bf9b30] mx-auto mb-4 flex items-center justify-center">
                                         <div className="w-2 h-2 bg-white"></div>
                                     </div>
-                                    <h3 className="font-bold text-xl mb-3 text-black">LUXURY LIVING</h3>
+                                    <h3 className="font-bold text-xl mb-3 text-[#bf9b30]">LUXURY LIVING</h3>
                                     <p className="text-gray-600 leading-relaxed">Redefining standards of premium residential excellence</p>
                                 </div>
                                 <div>
-                                    <div className="w-8 h-8 bg-black mx-auto mb-4 flex items-center justify-center">
+                                    <div className="w-8 h-8 bg-[#bf9b30] mx-auto mb-4 flex items-center justify-center">
                                         <div className="w-2 h-2 bg-white"></div>
                                     </div>
-                                    <h3 className="font-bold text-xl mb-3 text-black">COMMERCIAL EXCELLENCE</h3>
+                                    <h3 className="font-bold text-xl mb-3 text-[#bf9b30]">COMMERCIAL EXCELLENCE</h3>
                                     <p className="text-gray-600 leading-relaxed">Setting new benchmarks in business infrastructure</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center justify-center space-x-8">
-                                <div className="w-24 h-px bg-black"></div>
-                                <span className="text-black font-bold text-sm tracking-[0.2em] uppercase">MODERN REAL ESTATE</span>
-                                <div className="w-24 h-px bg-black"></div>
+                                <div className="w-24 h-px bg-[#bf9b30]"></div>
+                                <span className="text-[#bf9b30] font-bold text-sm tracking-[0.2em] uppercase">MODERN REAL ESTATE</span>
+                                <div className="w-24 h-px bg-[#bf9b30]"></div>
                             </div>
                         </div>
                     </motion.div>
