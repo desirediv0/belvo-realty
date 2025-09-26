@@ -63,7 +63,7 @@ export default function StatisticsSection() {
     const isInView = useInView(ref, { once: true, margin: "-80px" })
 
     return (
-        <section ref={ref} className="py-16 bg-white relative overflow-hidden">
+        <section ref={ref} className="py-8 md:py-16 bg-white relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-0 left-0 w-96 h-96 bg-black transform rotate-45 -translate-x-48 -translate-y-48"></div>
@@ -78,7 +78,7 @@ export default function StatisticsSection() {
                     className="max-w-7xl mx-auto"
                 >
                     {/* Statistics Cards */}
-                    <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-10 ">
+                    <motion.div variants={itemVariants} className="grid grid-cols-3 gap-3 md:gap-8 mb-10 ">
                         {[
                             { value: 5000, suffix: '+', label: 'Happy Customers', },
                             { value: 12, suffix: 'M sq.ft+', label: 'Under Development' },
@@ -96,12 +96,12 @@ export default function StatisticsSection() {
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-black opacity-5 transform rotate-45 translate-x-8 -translate-y-8"></div>
 
                                 <div className="relative z-10">
-                                    <div className="flex items-center justify-between mb-6">
+                                    <div className="flex items-center justify-between mb-3 md:mb-6">
                                         <div className="w-12 h-1 bg-black"></div>
 
                                     </div>
 
-                                    <div className="text-2xl md:text-4xl  text-center md:text-left  font-bold text-[#bf9b30] mb-4 libreCaslonDisplay tracking-wider">
+                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-bold text-[#bf9b30] mb-4 libreCaslonDisplay tracking-wider">
                                         {s.label === 'Planned Investment' ? (
                                             <>
                                                 ₹<CountUpNumber end={s.value} suffix={` ${s.suffix}`} />
@@ -111,7 +111,7 @@ export default function StatisticsSection() {
                                         )}
                                     </div>
 
-                                    <p className="text-black opacity-90 font-medium text-sm md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
+                                    <p className="text-black opacity-90 font-medium text-xs md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
                                 </div>
                             </motion.div>
                         ))}
