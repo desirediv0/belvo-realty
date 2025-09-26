@@ -4,6 +4,7 @@ import * as React from "react"
 import * as SheetPrimitive from "@radix-ui/react-dialog"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+import { motion, useAnimation } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -19,14 +20,19 @@ const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
-  <SheetPrimitive.Overlay
-    className={cn(
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-      className
-    )}
-    {...props}
-    ref={ref}
-  />
+  <SheetPrimitive.Overlay asChild {...props}>
+    <motion.div
+      ref={ref as unknown as React.Ref<HTMLDivElement>}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/80",
+        className
+      )}
+    />
+  </SheetPrimitive.Overlay>
 ))
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
@@ -56,22 +62,91 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = "right", className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content
-      ref={ref}
-      className={cn(sheetVariants({ side }), className)}
-      {...props}
-    >
-      <SheetPrimitive.Close className="absolute right-4 top-4  opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary text-white text-lg rounded-full p-1">
-        <X />
-        <span className="sr-only">Close</span>
-      </SheetPrimitive.Close>
-      {children}
-    </SheetPrimitive.Content>
-  </SheetPortal>
-))
+>(({ side = "right", className, children, ...props }, ref) => {
+  // controls for motion
+  const controls = useAnimation()
+  const localRef = React.useRef<HTMLDivElement | null>(null)
+
+  // helper to combine forwarded ref with localRef
+  const setRefs = (node: HTMLDivElement | null) => {
+    localRef.current = node
+    if (!ref) return
+    if (typeof ref === "function") {
+      // forwarded ref as function
+      (ref as (instance: HTMLDivElement | null) => void)(node)
+    } else {
+      // forwarded ref as mutable ref object
+      try {
+        (ref as React.MutableRefObject<HTMLDivElement | null>).current = node
+      } catch {
+        // ignore if assignment not possible
+      }
+    }
+  }
+
+  React.useEffect(() => {
+    const el = localRef.current
+    if (!el) return
+
+    const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+
+    // determine which closed variant to use based on side
+    const closedVariant = side === "left" ? "closedLeft" : side === "right" ? "closedRight" : side === "top" ? "closedTop" : "closedBottom"
+
+    // initial state
+    const state = el.getAttribute("data-state")
+    controls.set(state === "open" ? "open" : closedVariant)
+
+    // observe attribute changes to animate on open/close
+    const obs = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.type === "attributes" && m.attributeName === "data-state") {
+          const v = el.getAttribute("data-state")
+          if (prefersReduced) {
+            // jump instantly if reduced motion is preferred
+            controls.set(v === "open" ? "open" : closedVariant)
+          } else {
+            controls.start(v === "open" ? "open" : closedVariant)
+          }
+        }
+      }
+    })
+    obs.observe(el, { attributes: true })
+    return () => obs.disconnect()
+  }, [controls, side])
+
+  // variants per side
+  // slightly slower, smooth easing for a refined entrance/exit
+  const variants = {
+    open: { x: 0, y: 0, opacity: 1, transition: { duration: 0.8 } },
+    closedLeft: { x: "-100%", opacity: 0, transition: { duration: 0.6 } },
+    closedRight: { x: "100%", opacity: 0, transition: { duration: 0.6 } },
+    closedTop: { y: "-100%", opacity: 0, transition: { duration: 0.6 } },
+    closedBottom: { y: "100%", opacity: 0, transition: { duration: 0.6 } },
+  }
+
+  return (
+    <SheetPortal>
+      <SheetOverlay />
+      <SheetPrimitive.Content asChild {...props} ref={undefined}>
+        <motion.aside
+          ref={setRefs as unknown as React.Ref<HTMLDivElement>}
+          initial={false}
+          animate={controls}
+          variants={variants}
+          custom={side}
+          className={cn(sheetVariants({ side }), className)}
+        >
+          <SheetPrimitive.Close className="absolute right-4 top-4  opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary text-white text-lg rounded-full p-1">
+            <X />
+            <span className="sr-only">Close</span>
+          </SheetPrimitive.Close>
+          {children}
+        </motion.aside>
+      </SheetPrimitive.Content>
+    </SheetPortal>
+  )
+})
 SheetContent.displayName = SheetPrimitive.Content.displayName
 
 const SheetHeader = ({
