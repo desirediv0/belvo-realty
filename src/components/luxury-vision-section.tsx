@@ -63,7 +63,7 @@ export default function LuxuryVisionSection() {
     const isInView = useInView(ref, { once: true, margin: "-80px" })
 
     return (
-        <section ref={ref} className="py-32 bg-white relative overflow-hidden">
+        <section ref={ref} className="py-12 md:py-32 bg-white relative overflow-hidden">
             {/* Abstract geometric background */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-64 -right-64 w-96 h-96 bg-black opacity-5 transform rotate-12"></div>

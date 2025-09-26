@@ -91,13 +91,13 @@ export default function EmperorProjectSection() {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl libreCaslonDisplay text-neutral-800 leading-tight text-balance">
                                     Belvo The Emperor
                                 </h2>
-                                <p className="text-xl text-neutral-600 leading-relaxed">
+                                <p className="md:text-xl text-neutral-600 leading-relaxed">
                                     The Only Project of Dwarka Expressway on the Global Map
                                 </p>
                             </div>
 
                             <motion.div variants={itemVariants} className="space-y-6">
-                                <p className="text-lg text-neutral-600 leading-relaxed">
+                                <p className="md:text-lg text-neutral-600 leading-relaxed">
                                     Belvo The Emperor is the Most Sought-After Residential Address Right in Gurugram&apos;s Epicentre - Dwarka
                                     Expressway, Located in Sector 106. Globally-Recognized Consultants are Creating this Marvel.
                                 </p>

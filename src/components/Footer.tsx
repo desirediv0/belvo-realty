@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Twitter, Phone, Mail, MapPin, ArrowUp } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter, Phone, Mail, MapPin } from "lucide-react"
 
 interface FooterLink {
     label: string
@@ -206,10 +206,7 @@ const Footer: React.FC = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <div className="absolute right-6 bottom-6 bg-[#bf9b30] w-10 h-10 flex items-center justify-center  z-50 shadow-lg hover:bg-[#bf9b30]/90 transition-colors cursor-pointer">
-                <ArrowUp className="w-5 h-5 text-white cursor-pointer hover:text-gray-200" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
 
-            </div>
         </footer >
     )
 }

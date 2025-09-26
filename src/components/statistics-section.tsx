@@ -86,7 +86,7 @@ export default function StatisticsSection() {
                         ].map((s: { value: number; suffix: string; label: string; icon?: string }, i: number) => (
                             <motion.div
                                 key={i}
-                                className="group bg-transparent text-black p-8 relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                                className="group bg-transparent text-black py-4 md:py-0 md:p-8 relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                                 whileHover={{ y: -5 }}
                             >
                                 {/* subtle overlay kept transparent */}
@@ -96,8 +96,8 @@ export default function StatisticsSection() {
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-black opacity-5 transform rotate-45 translate-x-8 -translate-y-8"></div>
 
                                 <div className="relative z-10">
-                                    <div className="flex items-center justify-between mb-3 md:mb-6">
-                                        <div className="w-12 h-1 bg-black"></div>
+                                    <div className="flex items-center justify-between mb-3 md:mb-6 ">
+                                        <div className="w-12 h-1 bg-black mx-auto md:mx-0"></div>
 
                                     </div>
 
@@ -137,14 +137,14 @@ export default function StatisticsSection() {
                                 A Landmark on <span className="font-bold">Dwarka Expressway</span>
                             </p>
 
-                            <div className="grid md:grid-cols-2 gap-12 mt-16">
+                            <div className="grid md:grid-cols-2 gap-4 md:gap-12 mt-8 md:mt-16">
                                 <div className="text-left">
-                                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                                         Belvo The Emperor is the most sought-after residential address in Gurugram&apos;s epicentre — Dwarka Expressway, located in Sector 106.
                                     </p>
                                 </div>
                                 <div className="text-left">
-                                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                                    <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                                         Designed by globally recognized consultants to offer unmatched luxury, world-class amenities, and investment-grade developments.
                                     </p>
                                 </div>

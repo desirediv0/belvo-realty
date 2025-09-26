@@ -57,7 +57,7 @@ const VideoShowcaseSection = () => {
     }
 
     return (
-        <section className="min-h-[85vh] bg-background relative overflow-hidden">
+        <section className="min-h-[60vh] md:min-h-[85vh] bg-background relative overflow-hidden">
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -74,7 +74,7 @@ const VideoShowcaseSection = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                className="relative z-10 min-h-[85vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+                className="relative z-10 min-h-[60vh] md:min-h-[85vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
             >
                 <div className="text-center space-y-8 max-w-4xl mx-auto">
                     <motion.p variants={itemVariants} className="text-white/90 text-sm font-medium tracking-[0.2em] uppercase">
@@ -83,14 +83,14 @@ const VideoShowcaseSection = () => {
 
                     <motion.h2
                         variants={itemVariants}
-                        className="libreCaslonDisplay text-5xl md:text-7xl lg:text-8xl font-light text-white tracking-wide"
+                        className="libreCaslonDisplay text-4xl md:text-7xl lg:text-8xl font-light text-white tracking-wide"
                     >
                         BELVO REALTY
                     </motion.h2>
 
                     <motion.p
                         variants={itemVariants}
-                        className="text-white/80 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
+                        className="text-white/80 text-base md:text-xl leading-relaxed max-w-2xl mx-auto"
                     >
                         Experience our journey of creating exceptional spaces that redefine luxury living and commercial excellence.
                     </motion.p>

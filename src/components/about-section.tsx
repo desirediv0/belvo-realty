@@ -143,38 +143,38 @@ const AboutSection = () => {
 
                             <motion.h2
                                 variants={itemVariants}
-                                className="libreCaslonDisplay text-4xl   leading-tight text-balance"
+                                className="libreCaslonDisplay text-2xl md:text-4xl   leading-tight text-balance"
                             >
                                 Belvo Realty Redefines Luxury In The World Of Real Estate With The Most Exclusive Residential,
                                 Commercial & Hospitality Projects.
                             </motion.h2>
 
-                            <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+                            <motion.p variants={itemVariants} className="text-muted-foreground md:text-lg leading-relaxed max-w-2xl">
                                 Featuring Flawless Designs, A High Level Of Detailing, And Elegant Architecture. Each Project Is A
                                 Marvel In Itself - The Most Luxurious Experiences Await You When You Choose Belvo Properties.
                             </motion.p>
                         </div>
 
                         {/* Services Grid */}
-                        <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 items-start">
+                        <motion.div variants={containerVariants} className="grid grid-cols-3 gap-2 md:gap-8 pt-8 items-start">
                             {services.map((service) => (
                                 <motion.div
                                     key={service.title}
                                     variants={serviceVariants}
                                     whileHover="hover"
-                                    className="text-center space-y-4 group cursor-pointer p-6 border border-gray-100 bg-white shadow-sm hover:shadow-md transition-transform duration-300"
+                                    className="text-center space-y-4 group cursor-pointer p-2 md:p-6 border min-h-44 border-gray-100 bg-white shadow-sm hover:shadow-md transition-transform duration-300"
                                 >
                                     <div className="flex justify-center">
                                         <motion.div
                                             variants={iconVariants}
-                                            className="w-20 h-20 bg-gray-50 border border-gray-200 flex items-center justify-center group-hover:scale-105 transition-all duration-300"
+                                            className="md:w-20 w-12 h-12 md:h-20 bg-gray-50 border border-gray-200 flex items-center justify-center group-hover:scale-105 transition-all duration-300"
                                         >
-                                            <service.icon className="w-10 h-10  text-[#bf9b30]" />
+                                            <service.icon className="w-8 md:w-10 h-8 md:h-10  text-[#bf9b30]" />
                                         </motion.div>
                                     </div>
                                     <div className="space-y-2">
-                                        <h3 className="font-medium text-gray-900 text-lg">{service.title}</h3>
-                                        <p className="text-sm text-gray-600">{service.description}</p>
+                                        <h3 className="font-medium text-gray-900 text-sm md:text-lg">{service.title}</h3>
+                                        <p className="text-xs md:text-sm text-gray-600">{service.description}</p>
                                     </div>
                                 </motion.div>
                             ))}
