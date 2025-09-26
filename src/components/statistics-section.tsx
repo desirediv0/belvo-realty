@@ -78,7 +78,7 @@ export default function StatisticsSection() {
                     className="max-w-7xl mx-auto"
                 >
                     {/* Statistics Cards */}
-                    <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-8 mb-10 ">
+                    <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-10 ">
                         {[
                             { value: 5000, suffix: '+', label: 'Happy Customers', },
                             { value: 12, suffix: 'M sq.ft+', label: 'Under Development' },
@@ -101,7 +101,7 @@ export default function StatisticsSection() {
 
                                     </div>
 
-                                    <div className="text-4xl md:text-5xl  font-bold text-[#bf9b30] mb-4 libreCaslonDisplay tracking-wider">
+                                    <div className="text-2xl md:text-4xl  text-center md:text-left  font-bold text-[#bf9b30] mb-4 libreCaslonDisplay tracking-wider">
                                         {s.label === 'Planned Investment' ? (
                                             <>
                                                 ₹<CountUpNumber end={s.value} suffix={` ${s.suffix}`} />
@@ -111,7 +111,7 @@ export default function StatisticsSection() {
                                         )}
                                     </div>
 
-                                    <p className="text-black opacity-90 font-medium text-lg tracking-wide uppercase ">{s.label}</p>
+                                    <p className="text-black opacity-90 font-medium text-sm md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
                                 </div>
                             </motion.div>
                         ))}

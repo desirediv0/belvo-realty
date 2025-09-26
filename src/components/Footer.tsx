@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Twitter, Youtube, Phone, Mail, MapPin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter, Phone, Mail, MapPin, ArrowUp } from "lucide-react"
 
 interface FooterLink {
     label: string
@@ -87,7 +87,6 @@ const Footer: React.FC = () => {
         { icon: Instagram, href: "https://instagram.com/belvorealty", label: "Instagram" },
         { icon: Linkedin, href: "https://linkedin.com/company/belvorealty", label: "LinkedIn" },
         { icon: Twitter, href: "https://twitter.com/belvorealty", label: "Twitter" },
-        { icon: Youtube, href: "https://youtube.com/belvorealty", label: "YouTube" },
     ]
 
     return (
@@ -122,7 +121,7 @@ const Footer: React.FC = () => {
                                             <li key={link.label}>
                                                 <a
                                                     href={link.href}
-                                                    className="text-gray-400 hover:text-white transition-colors duration-200 text-sm leading-relaxed"
+                                                    className="text-gray-200 hover:text-[#bf9b30] transition-colors duration-200 text-sm leading-relaxed"
                                                 >
                                                     {link.label}
                                                 </a>
@@ -142,7 +141,7 @@ const Footer: React.FC = () => {
                                         <div className="flex items-start space-x-3">
                                             <MapPin className="w-5 h-5 text-white mt-1 flex-shrink-0" />
                                             <div>
-                                                <p className="text-sm text-gray-400 leading-relaxed">
+                                                <p className="text-sm text-gray-200 leading-relaxed">
                                                     649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505
                                                 </p>
                                             </div>
@@ -150,11 +149,11 @@ const Footer: React.FC = () => {
                                         <div className="space-y-3">
                                             <div className="flex items-center space-x-3">
                                                 <Phone className="w-5 h-5 text-white flex-shrink-0" />
-                                                <span className="text-sm text-gray-400">+91 9090 939193</span>
+                                                <span className="text-sm text-gray-200">+91 9090 939193</span>
                                             </div>
                                             <div className="flex items-center space-x-3">
                                                 <Mail className="w-5 h-5 text-white flex-shrink-0" />
-                                                <span className="text-sm text-gray-400"> hello@belvorealty.com</span>
+                                                <span className="text-sm text-gray-200"> hello@belvorealty.com</span>
                                             </div>
                                         </div>
                                     </div>
@@ -170,10 +169,10 @@ const Footer: React.FC = () => {
                                                 href={social.href}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.95 }}
-                                                className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20  flex items-center justify-center hover:bg-white hover:border-white transition-all duration-300 group"
+                                                className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20  flex items-center justify-center hover:bg-[#bf9b30] hover:border-white transition-all duration-300 group"
                                                 aria-label={social.label}
                                             >
-                                                <social.icon className="w-4 h-4 text-white group-hover:text-gray-400 transition-colors" />
+                                                <social.icon className="w-4 h-4 text-white group-hover:text-gray-200 transition-colors" />
                                             </motion.a>
                                         ))}
                                     </div>
@@ -188,18 +187,18 @@ const Footer: React.FC = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <div className="flex items-center space-x-2">
-                                <p className="text-sm text-gray-400">
+                                <p className="text-sm text-gray-200">
                                     Copyright © 2025 <span className="text-[#bf9b30]">Belvo Realty</span> All Rights Reserved
                                 </p>
                             </div>
-                            <div className="flex space-x-6 text-sm text-gray-400">
-                                <a href="/privacy" className="hover:text-white transition-colors">
+                            <div className="flex space-x-6 text-sm text-gray-200">
+                                <a href="/privacy" className="hover:text-[#bf9b30] transition-colors">
                                     Privacy Policy
                                 </a>
-                                <a href="/terms" className="hover:text-white transition-colors">
+                                <a href="/terms" className="hover:text-[#bf9b30] transition-colors">
                                     Terms & Conditions
                                 </a>
-                                <a href="/disclaimer" className="hover:text-white transition-colors">
+                                <a href="/disclaimer" className="hover:text-[#bf9b30] transition-colors">
                                     Disclaimer
                                 </a>
                             </div>
@@ -207,7 +206,11 @@ const Footer: React.FC = () => {
                     </div>
                 </motion.div>
             </motion.div>
-        </footer>
+            <div className="absolute right-6 bottom-6 bg-[#bf9b30] w-10 h-10 flex items-center justify-center  z-50 shadow-lg hover:bg-[#bf9b30]/90 transition-colors cursor-pointer">
+                <ArrowUp className="w-5 h-5 text-white cursor-pointer hover:text-gray-200" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} />
+
+            </div>
+        </footer >
     )
 }
 

@@ -31,7 +31,7 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.4 }}
                         className="libreCaslonDisplay font-normal text-white mb-8 leading-tight text-balance text-center"
-                        style={{ fontSize: 'clamp(2.25rem, 8vw, 5.5rem)' }}
+                        style={{ fontSize: 'clamp(2.25rem, 8vw, 4.5rem)' }}
                     >
                         BELVO REALTY
                     </motion.h1>

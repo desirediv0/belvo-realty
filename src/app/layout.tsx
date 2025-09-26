@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+// import WhatsAppButton from "@/components/WhatsAppButton";
 import { Suspense } from "react"
 import localFont from "next/font/local"
 
@@ -39,7 +39,7 @@ export default function RootLayout({
           <Navigation />
           {children}
           <Footer />
-          <WhatsAppButton />
+          {/* <WhatsAppButton /> */}
         </Suspense>
 
       </body>
