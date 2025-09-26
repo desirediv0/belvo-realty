@@ -9,7 +9,6 @@ import {
     SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-    IconDeviceLandlinePhone,
     IconMenuDeep,
     IconHome,
     IconInfoCircle,
@@ -19,6 +18,7 @@ import {
 import { motion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
+import { PhoneCall } from "lucide-react";
 
 
 const menuItems = [
@@ -29,7 +29,7 @@ const menuItems = [
 ];
 
 const contactNumber = () => {
-    window.location.href = "tel:123-456-7890";
+    window.location.href = "tel:+919090939193";
 };
 
 const Navigation = () => {
@@ -51,27 +51,27 @@ const Navigation = () => {
         if (open && firstOpen) setFirstOpen(false);
     };
 
-    // Animation variants for staggered menu - made smoother
+
     const containerVariants = {
         hidden: {},
         show: {
             transition: {
-                staggerChildren: 0.2, // Slower stagger for smoother effect
+                staggerChildren: 0.2,
             },
         },
     };
     const itemVariants = {
-        hidden: { opacity: 0, x: -60 }, // Changed to negative x for left-side entry
+        hidden: { opacity: 0, x: -80 },
         show: {
             opacity: 1,
             x: 0,
             transition: {
-                duration: 0.6 // Increased duration for slower, smoother animation
+                duration: 0.6
             }
         },
     };
 
-    // Menu button animation (from top on first open)
+
     const menuBtnVariants = {
         initial: { y: -40, opacity: 0 },
         animate: {
@@ -88,7 +88,7 @@ const Navigation = () => {
         <>
 
             <nav
-                className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 libreCaslonDisplay  ${scrolled ? "py-2 h-16" : "py-6 h-24"}`}
+                className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 libreCaslonDisplay  ${scrolled ? "py-2 h-20" : "py-6 h-24"}`}
             >
                 {/* Left side - Menu Button */}
                 <div className="flex items-center">
@@ -98,8 +98,8 @@ const Navigation = () => {
                                 variants={firstOpen ? menuBtnVariants : menuBtnVariants.normal}
                                 initial={firstOpen ? "initial" : false}
                                 animate={firstOpen ? "animate" : false}
-                                whileHover={{ scale: 1.05 }} // Reduced from 1.1 for smoother hover
-                                whileTap={{ scale: 0.95 }} // Added tap animation
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
                                 className="transition-colors text-white px-3 py-2 rounded-lg focus:outline-none focus:ring-0 bg-transparent"
                                 aria-label="Open navigation menu"
                             >
@@ -156,8 +156,8 @@ const Navigation = () => {
                         <Image
                             src={"/logo.svg"}
                             alt="Belvo Realty"
-                            width={scrolled ? 55 : 80}
-                            height={scrolled ? 55 : 80}
+                            width={scrolled ? 70 : 80}
+                            height={scrolled ? 70 : 80}
                             className="rounded-full transition-all duration-300"
                         />
                     </Link>
@@ -170,10 +170,10 @@ const Navigation = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className="flex items-center gap-2 text-sm font-medium text-white hover:text-gray-300 transition-all duration-200 focus:outline-none rounded px-3 py-1"
-                        aria-label="Call 123-456-7890"
+                        aria-label="Call 9090939193"
                     >
-                        <IconDeviceLandlinePhone size={22} className="text-white" />
-                        <span className="hidden sm:inline text-white">123-456-7890</span>
+                        <PhoneCall size={22} className="text-white" />
+                        <span className="hidden sm:inline text-white">909 093 9193</span>
                     </motion.button>
                 </div>
             </nav>

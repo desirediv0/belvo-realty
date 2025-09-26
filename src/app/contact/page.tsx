@@ -4,7 +4,6 @@ import { useState } from "react"
 import { motion, Variants } from "framer-motion"
 import HeroPage from "@/components/HeroPage"
 import { Button } from "@/components/ui/button"
-// Image removed: using embedded Google Maps iframe for location
 import HeadText from "@/components/Head-text"
 
 const container: Variants = {
@@ -28,10 +27,11 @@ export default function ContactPage() {
         const formData = new FormData(form)
         const name = String(formData.get("name") || "").trim()
         const email = String(formData.get("email") || "").trim()
+        const phone = String(formData.get("phone") || "").trim()
         const message = String(formData.get("message") || "").trim()
 
-        if (!name || !email || !message) {
-            setError("Please fill name, email and message.")
+        if (!name || !email || !message || !phone) {
+            setError("Please fill name, email, message and phone.")
             return
         }
 
@@ -40,7 +40,10 @@ export default function ContactPage() {
         try {
             await new Promise((res) => setTimeout(res, 1000))
             setStatus("sent")
+            console.log({ name, email, phone, message })
             form.reset()
+            await new Promise((res) => setTimeout(res, 5000))
+            setStatus("idle")
         } catch {
             setStatus("error")
             setError("Something went wrong. Please try again.")
@@ -78,13 +81,8 @@ export default function ContactPage() {
                                 Reach our experienced sales advisors or drop a message and we will get back to you within one business day.
                             </p>
 
-                            <div className="grid sm:grid-cols-2 gap-4">
-                                <div className="p-6 border rounded-lg">
-                                    <h4 className="font-semibold mb-2">Sales Office</h4>
-                                    <p className="text-sm text-gray-600">Office No.- 649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</p>
-                                    <a href="tel:+919090939193" className="text-sm text-slate-900 block mt-2">+91 9090 939193</a>
-                                    <a href="mailto:hello@belvorealty.com" className="text-sm text-slate-900 block mt-1">hello@belvorealty.com</a>
-                                </div>
+                            <div className="grid gap-4">
+
 
                                 <div className="p-6 border rounded-lg">
                                     <h4 className="font-semibold mb-2">Head Office</h4>
@@ -128,13 +126,13 @@ export default function ContactPage() {
 
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-medium mb-1">Email address</label>
-                                        <input id="email" name="email" type="email" required className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="you@example.com" />
+                                        <input id="email" name="email" type="email" required className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="Enter your email address" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone (optional)</label>
-                                    <input id="phone" name="phone" type="tel" className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" placeholder="+91 12345 67890" />
+                                    <label htmlFor="phone" className="block text-sm font-medium mb-1">Phone</label>
+                                    <input id="phone" name="phone" type="tel" className="p-3 border rounded w-full focus:outline-none focus:ring-2 focus:ring-slate-300" required placeholder="Enter your phone number" />
                                     <p className="text-xs text-gray-500 mt-1">We&apos;ll only use this to contact you about your enquiry.</p>
                                 </div>
 

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react"
 import { FaWhatsapp, FaTimes } from "react-icons/fa"
 
-const PHONE = "919090939193" // use international format without + for wa.me
+const PHONE = "919090939193"
 const MESSAGE = encodeURIComponent("Hi! I'm interested in your properties. Could you help me?")
 
 export default function WhatsAppButton(): JSX.Element {
@@ -53,7 +53,7 @@ export default function WhatsAppButton(): JSX.Element {
                                 </div>
                                 <div className="text-sm">
                                     <div className="font-medium">Chat on WhatsApp</div>
-                                    <div className="text-xs text-gray-500">+91 12345 67890</div>
+                                    <div className="text-xs text-gray-500">+91 9090939193</div>
                                 </div>
                             </a>
                             <button onClick={() => setExpanded(false)} aria-label="Close" className="p-2 rounded-md text-gray-600 hover:bg-gray-100">
