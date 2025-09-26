@@ -38,7 +38,6 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <Navigation />
           {children}
-
           <Footer />
           <WhatsAppButton />
         </Suspense>
