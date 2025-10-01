@@ -33,7 +33,7 @@ const itemVariants: Variants = {
 const images = [
     {
         id: 1,
-        title: "The Regency",
+        title: "Hero Homes",
         location: "Sector 106",
         src: ShowcaseSection,
         year: "2024",
