@@ -154,7 +154,7 @@ const Navigation = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2">
                     <Link href={"/"} className="flex items-center gap-2">
                         <Image
-                            src={"/logo.svg"}
+                            src={"/logo.png"}
                             alt="Belvo Realty"
                             width={scrolled ? 70 : 80}
                             height={scrolled ? 70 : 80}
