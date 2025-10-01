@@ -88,7 +88,7 @@ const Navigation = () => {
         <>
 
             <nav
-                className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 libreCaslonDisplay  ${scrolled ? "py-2 h-20" : "py-6 h-24"}`}
+                className={`px-6 transition-all duration-300 flex justify-between items-center border-b border-gray-900 bg-black/20 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 libreCaslonDisplay  ${scrolled ? "py-2 h-28" : "py-6 h-[7rem]"}`}
             >
                 {/* Left side - Menu Button */}
                 <div className="flex items-center">
@@ -156,8 +156,8 @@ const Navigation = () => {
                         <Image
                             src={"/logo.png"}
                             alt="Belvo Realty"
-                            width={scrolled ? 70 : 80}
-                            height={scrolled ? 70 : 80}
+                            width={scrolled ? 100 : 90}
+                            height={scrolled ? 100 : 90}
                             className="rounded-full transition-all duration-300"
                         />
                     </Link>

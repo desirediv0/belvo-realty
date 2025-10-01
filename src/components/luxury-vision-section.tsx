@@ -3,7 +3,7 @@
 import { motion, Variants, useInView } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
-import { luxuryvisiondesktop } from "@/assets/inedex"
+import { luxury2 } from "@/assets/inedex"
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -125,10 +125,10 @@ export default function LuxuryVisionSection() {
                         {/* Image Container */}
                         <div className="relative aspect-[16/8] md:aspect-[21/8] overflow-hidden bg-black">
                             <Image
-                                src={luxuryvisiondesktop}
+                                src={luxury2}
                                 alt="Luxury architectural vision"
                                 fill
-                                className="object-cover transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
+                                className="object-cover object-top transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
                                 priority={false}
                             />
 

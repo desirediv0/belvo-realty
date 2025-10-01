@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Play } from "lucide-react"
 import VideoDialog from "./video-dialog"
-import { ShowcaseSection } from "@/assets/inedex"
+import { luxuryvisiondesktop } from "@/assets/inedex"
 
 
 const getSrc = (asset: unknown) => {
@@ -13,7 +13,7 @@ const getSrc = (asset: unknown) => {
     }
     return String(asset)
 }
-const bgUrl = getSrc(ShowcaseSection)
+const bgUrl = getSrc(luxuryvisiondesktop)
 
 const VideoShowcaseSection = () => {
     const containerVariants = {

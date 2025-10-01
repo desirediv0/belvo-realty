@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { ArrowRight, Building2, Users, TrendingUp } from "lucide-react"
-import { luxury2 } from "@/assets/inedex"
+import { luxury } from "@/assets/inedex"
 import Image from "next/image"
 
 const containerVariants = {
@@ -136,7 +136,7 @@ export default function EmperorProjectSection() {
                         <motion.div variants={itemVariants} className="relative">
                             <div className="aspect-[4/5] rounded-none overflow-hidden shadow-2xl">
                                 <Image
-                                    src={luxury2}
+                                    src={luxury}
                                     alt="Belvo The Emperor project visualization"
                                     className="w-full h-full object-cover"
                                     loading="lazy"
