@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Play } from "lucide-react"
-import VideoDialog from "./video-dialog"
+// import { Play } from "lucide-react"
+// import VideoDialog from "./video-dialog"
 import { luxuryvisiondesktop } from "@/assets/inedex"
 
 
@@ -38,23 +38,23 @@ const VideoShowcaseSection = () => {
         },
     }
 
-    const playButtonVariants = {
-        hidden: { scale: 0, opacity: 0 },
-        visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-                delay: 0.5,
-                duration: 0.6,
-            },
-        },
-        hover: {
-            scale: 1.1,
-            transition: {
-                duration: 0.3,
-            },
-        },
-    }
+    // const playButtonVariants = {
+    //     hidden: { scale: 0, opacity: 0 },
+    //     visible: {
+    //         scale: 1,
+    //         opacity: 1,
+    //         transition: {
+    //             delay: 0.5,
+    //             duration: 0.6,
+    //         },
+    //     },
+    //     hover: {
+    //         scale: 1.1,
+    //         transition: {
+    //             duration: 0.3,
+    //         },
+    //     },
+    // }
 
     return (
         <section className="min-h-[60vh] md:min-h-[85vh] bg-background relative overflow-hidden">
@@ -83,7 +83,7 @@ const VideoShowcaseSection = () => {
 
                     <motion.h2
                         variants={itemVariants}
-                        className="libreCaslonDisplay text-4xl md:text-7xl lg:text-8xl font-light text-[#fbd04e] tracking-wide"
+                        className="libreCaslonDisplay text-4xl md:text-7xl lg:text-8xl font-light text-[#D3B88F] tracking-wide"
                     >
                         BELVO REALTY
                     </motion.h2>
@@ -96,14 +96,14 @@ const VideoShowcaseSection = () => {
                     </motion.p>
 
                     {/* Play Button */}
-                    <VideoDialog videoSrc="/desktop-banner.webm" title="Belvo Realty - A Decade of Success">
+                    {/* <VideoDialog videoSrc="/desktop-banner.webm" title="Belvo Realty - A Decade of Success">
                         <motion.button variants={playButtonVariants} whileHover="hover" className="group relative">
                             <div className="w-20 h-20 md:w-24 md:h-24 bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center cursor-pointer transition-all duration-300 group-hover:bg-white/20">
                                 <Play className="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor" />
                             </div>
                             <div className="absolute inset-0 bg-white/5 scale-0 group-hover:scale-110 transition-transform duration-300" />
                         </motion.button>
-                    </VideoDialog>
+                    </VideoDialog> */}
                 </div>
             </motion.div>
         </section>

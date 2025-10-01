@@ -123,7 +123,7 @@ export default function LuxuryVisionSection() {
                         className="relative group mb-20"
                     >
                         {/* Image Container */}
-                        <div className="relative aspect-[16/8] md:aspect-[21/8] overflow-hidden bg-black">
+                        <div className="relative aspect-[16/8] md:aspect-[21/10] overflow-hidden bg-black">
                             <Image
                                 src={luxury2}
                                 alt="Luxury architectural vision"

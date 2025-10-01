@@ -173,7 +173,7 @@ const Navigation = () => {
                         aria-label="Call 9090939193"
                     >
                         <PhoneCall size={22} className="text-white" />
-                        <span className="hidden sm:inline text-white">909 093 9193</span>
+                        <span className="hidden sm:inline text-white text-base">9090 939193</span>
                     </motion.button>
                 </div>
             </nav>
