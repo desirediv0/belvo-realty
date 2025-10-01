@@ -108,13 +108,13 @@ const Navigation = () => {
                         </SheetTrigger>
                         <SheetContent
                             side="left"
-                            className="w-72 md:w-96 bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left data-[state=closed]:duration-500 data-[state=open]:duration-500"
+                            className="bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left data-[state=closed]:duration-500 data-[state=open]:duration-500"
                         >
                             <SheetHeader>
                                 <SheetTitle className="text-2xl font-bold text-gray-200 mb-2">Belvo Realty</SheetTitle>
                                 <SheetDescription>
                                     <motion.div
-                                        className="flex flex-col gap-3 mt-4"
+                                        className="flex flex-col gap-3 mt-4 items-end"
                                         variants={containerVariants}
                                         initial="hidden"
                                         animate="show"
@@ -133,12 +133,12 @@ const Navigation = () => {
                                                 >
                                                     <Link
                                                         href={item.link}
-                                                        className="flex items-center gap-3 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200"
+                                                        className="flex w-full items-center gap-3 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 justify-end text-right"
                                                         aria-label={item.name}
                                                         onClick={() => setSheetOpen(false)}
                                                     >
-                                                        <Icon size={24} className="text-white" />
                                                         <span className="text-white text-lg font-semibold">{item.name}</span>
+                                                        <Icon size={24} className="text-white" />
                                                     </Link>
                                                 </motion.div>
                                             );
