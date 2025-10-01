@@ -16,7 +16,7 @@ function HeroPage({
     subtitle,
 
     minHeight = "80vh",
-    background = { type: 'video', src: '/desktop-banner.webm' },
+    background = { type: 'video', src: '/desktop-banner.mp4' },
     breadcrumb = [{ label: 'Home', href: '/' }],
 }: HeroPageProps) {
     const defaultHeading = (
