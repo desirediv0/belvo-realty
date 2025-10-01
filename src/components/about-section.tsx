@@ -136,7 +136,7 @@ const AboutSection = () => {
                         <div className="space-y-6">
                             <motion.p
                                 variants={itemVariants}
-                                className="text-[#bf9b30] text-sm font-medium tracking-wider uppercase"
+                                className="text-[#AA8453] text-sm font-medium tracking-wider uppercase"
                             >
                                 About Belvo Realty
                             </motion.p>
@@ -169,7 +169,7 @@ const AboutSection = () => {
                                             variants={iconVariants}
                                             className="md:w-20 w-12 h-12 md:h-20 bg-gray-50 border border-gray-200 flex items-center justify-center group-hover:scale-105 transition-all duration-300"
                                         >
-                                            <service.icon className="w-8 md:w-10 h-8 md:h-10  text-[#bf9b30]" />
+                                            <service.icon className="w-8 md:w-10 h-8 md:h-10  text-[#AA8453]" />
                                         </motion.div>
                                     </div>
                                     <div className="space-y-2">

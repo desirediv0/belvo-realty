@@ -45,9 +45,9 @@ const HeadText = ({
             animate={isInView ? "visible" : "hidden"}
             className="text-center mb-8"
         >
-            <motion.div variants={lineVariants} className="mx-auto mb-6 h-px bg-[#bf9b30]" />
+            <motion.div variants={lineVariants} className="mx-auto mb-6 h-px bg-[#AA8453]" />
 
-            <motion.span variants={item} className="text-xs tracking-[0.3em] uppercase font-bold text-[#bf9b30] mb-5 block libreCaslonDisplay">
+            <motion.span variants={item} className="text-xs tracking-[0.3em] uppercase font-bold text-[#AA8453] mb-5 block libreCaslonDisplay">
                 {heading}
             </motion.span>
 

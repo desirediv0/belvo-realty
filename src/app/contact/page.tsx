@@ -76,7 +76,7 @@ export default function ContactPage() {
 
                     <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 items-start">
                         <motion.div variants={item} className="space-y-6">
-                            <h2 className="text-3xl font-bold text-[#bf9b30]">Contact Sales & Support</h2>
+                            <h2 className="text-3xl font-bold text-[#AA8453]">Contact Sales & Support</h2>
                             <p className="text-gray-700 leading-relaxed">
                                 Reach our experienced sales advisors or drop a message and we will get back to you within one business day.
                             </p>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                         </motion.div>
 
                         <motion.div variants={item} className="p-6 border rounded-lg bg-gray-50">
-                            <h3 className="text-2xl font-bold mb-4 text-[#bf9b30]">Send Us a Message</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-[#AA8453]">Send Us a Message</h3>
 
                             <form onSubmit={handleSubmit} className="grid gap-4" aria-live="polite">
                                 <div className="grid sm:grid-cols-2 gap-4">

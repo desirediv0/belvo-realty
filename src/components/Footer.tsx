@@ -112,16 +112,16 @@ const Footer: React.FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                             {footerSections.map((section) => (
                                 <motion.div key={section.title} variants={itemVariants}>
-                                    <h3 className="text-lg font-semibold mb-6 text-[#bf9b30] relative">
+                                    <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">
                                         {section.title}
-                                        <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#bf9b30] to-black" />
+                                        <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
                                     </h3>
                                     <ul className="space-y-3">
                                         {section.links.map((link) => (
                                             <li key={link.label}>
                                                 <a
                                                     href={link.href}
-                                                    className="text-gray-200 hover:text-[#bf9b30] transition-colors duration-200 text-sm leading-relaxed"
+                                                    className="text-gray-200 hover:text-[#AA8453] transition-colors duration-200 text-sm leading-relaxed"
                                                 >
                                                     {link.label}
                                                 </a>
@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
                         <motion.div variants={itemVariants} className="mt-16 pt-12 border-t border-black/50">
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                                 <div className="lg:col-span-2">
-                                    <h3 className="text-xl font-semibold mb-6 text-[#bf9b30]">Get In Touch</h3>
+                                    <h3 className="text-xl font-semibold mb-6 text-[#AA8453]">Get In Touch</h3>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="flex items-start space-x-3">
                                             <MapPin className="w-5 h-5 text-white mt-1 flex-shrink-0" />
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
 
                                 {/* Social Media */}
                                 <div>
-                                    <h3 className="text-xl font-semibold mb-6 text-[#bf9b30]">Follow Us</h3>
+                                    <h3 className="text-xl font-semibold mb-6 text-[#AA8453]">Follow Us</h3>
                                     <div className="flex space-x-4">
                                         {socialLinks.map((social) => (
                                             <motion.a
@@ -169,7 +169,7 @@ const Footer: React.FC = () => {
                                                 href={social.href}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.95 }}
-                                                className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20  flex items-center justify-center hover:bg-[#bf9b30] hover:border-white transition-all duration-300 group"
+                                                className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20  flex items-center justify-center hover:bg-[#AA8453] hover:border-white transition-all duration-300 group"
                                                 aria-label={social.label}
                                             >
                                                 <social.icon className="w-4 h-4 text-white group-hover:text-gray-200 transition-colors" />
@@ -188,17 +188,17 @@ const Footer: React.FC = () => {
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <div className="flex items-center space-x-2">
                                 <p className="text-sm text-gray-200">
-                                    Copyright © 2025 <span className="text-[#bf9b30]">Belvo Realty</span> All Rights Reserved
+                                    Copyright © 2025 <span className="text-[#AA8453]">Belvo Realty</span> All Rights Reserved
                                 </p>
                             </div>
                             <div className="flex space-x-6 text-sm text-gray-200">
-                                <a href="/privacy" className="hover:text-[#bf9b30] transition-colors">
+                                <a href="/privacy" className="hover:text-[#AA8453] transition-colors">
                                     Privacy Policy
                                 </a>
-                                <a href="/terms" className="hover:text-[#bf9b30] transition-colors">
+                                <a href="/terms" className="hover:text-[#AA8453] transition-colors">
                                     Terms & Conditions
                                 </a>
-                                <a href="/disclaimer" className="hover:text-[#bf9b30] transition-colors">
+                                <a href="/disclaimer" className="hover:text-[#AA8453] transition-colors">
                                     Disclaimer
                                 </a>
                             </div>

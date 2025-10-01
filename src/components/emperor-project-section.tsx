@@ -84,7 +84,7 @@ export default function EmperorProjectSection() {
                         <motion.div variants={itemVariants} className="space-y-8">
                             <div className="space-y-6">
                                 <motion.div variants={itemVariants} className="inline-block">
-                                    <span className="px-4 py-2 bg-black text-[#bf9b30] text-sm font-medium ">
+                                    <span className="px-4 py-2 bg-black text-[#AA8453] text-sm font-medium ">
                                         Flagship Project
                                     </span>
                                 </motion.div>
@@ -110,7 +110,7 @@ export default function EmperorProjectSection() {
                                             className="flex items-start space-x-4 p-4 bg-white/60 backdrop-blur-sm rounded-lg border border-white/20"
                                         >
                                             <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                                                <feature.icon className="w-6 h-6 text-[#bf9b30]" />
+                                                <feature.icon className="w-6 h-6 text-[#AA8453]" />
                                             </div>
                                             <div>
                                                 <h4 className="font-semibold text-neutral-800 mb-1">{feature.title}</h4>
@@ -125,7 +125,7 @@ export default function EmperorProjectSection() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="inline-flex items-center space-x-2 bg-neutral-900 text-[#bf9b30] px-8 py-4 hover:bg-neutral-800 transition-colors duration-300 group"
+                                    className="inline-flex items-center space-x-2 bg-neutral-900 text-[#AA8453] px-8 py-4 hover:bg-neutral-800 transition-colors duration-300 group"
                                 >
                                     <span className="font-medium">Explore The Emperor</span>
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

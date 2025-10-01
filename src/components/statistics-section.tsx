@@ -101,7 +101,7 @@ export default function StatisticsSection() {
 
                                     </div>
 
-                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-bold text-[#bf9b30] mb-4 libreCaslonDisplay tracking-wider">
+                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-bold text-[#AA8453] mb-4 libreCaslonDisplay tracking-wider">
                                         {s.label === 'Planned Investment' ? (
                                             <>
                                                 ₹<CountUpNumber end={s.value} suffix={` ${s.suffix}`} />
@@ -152,7 +152,7 @@ export default function StatisticsSection() {
 
                             <div className="mt-16 flex items-center justify-center space-x-8">
                                 <div className="w-16 h-px bg-black"></div>
-                                <span className="text-[#bf9b30] font-bold text-sm tracking-widest uppercase">PREMIUM LIVING</span>
+                                <span className="text-[#AA8453] font-bold text-sm tracking-widest uppercase">PREMIUM LIVING</span>
                                 <div className="w-16 h-px bg-black"></div>
                             </div>
                         </div>
