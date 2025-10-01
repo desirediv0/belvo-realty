@@ -110,7 +110,7 @@ const AboutSection = () => {
                 >
                     {/* Image Section */}
                     <motion.div variants={imageVariants} className="relative flex items-center justify-center">
-                        <div className="aspect-[3/4] md:aspect-[2/3] overflow-hidden bg-muted max-w-md mx-auto max-h-[760px]">
+                        <div className="overflow-hidden  max-w-2xl mx-auto max-h-[760px]">
                             <Image
                                 src={modernluxuryrealestateofficeinteriorwithmar}
                                 alt="Belvo Realty Modern Office Interior"
@@ -123,7 +123,7 @@ const AboutSection = () => {
                             <div className="absolute inset-0 bg-black/25 flex items-center justify-center">
                                 <motion.div
                                     variants={logoVariants}
-                                    className="text-white libreCaslonDisplay text-5xl md:text-6xl font-light tracking-widest uppercase opacity-95"
+                                    className="text-[#fbd04e] libreCaslonDisplay text-5xl md:text-6xl font-medium tracking-widest uppercase opacity-95"
                                 >
                                     belvo
                                 </motion.div>

@@ -8,7 +8,7 @@ const Hero = () => {
     return (
         <div className="relative min-h-screen overflow-hidden">
             <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-                <source src="/desktop-banner.webm" type="video/webm" />
+                <source src="/desktop-banner.mp4" type="video/mp4" />
             </video>
 
             <div className="absolute inset-0 bg-black/40 z-10" />
