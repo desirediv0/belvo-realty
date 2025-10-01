@@ -35,6 +35,7 @@ export default function AboutPage() {
                 heading={<><span>ABOUT US</span></>}
                 subtitle={<span>Discover the legacy and vision behind Belvo Realty — where craft meets comfort.</span>}
                 breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
+                background={{ type: 'video', src: '/aboutvideo.mp4' }}
             />
 
             <section className="py-16 bg-white text-black relative overflow-hidden">
