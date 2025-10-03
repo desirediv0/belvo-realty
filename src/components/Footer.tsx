@@ -149,11 +149,15 @@ const Footer: React.FC = () => {
                                         <div className="space-y-3">
                                             <div className="flex items-center space-x-3">
                                                 <Phone className="w-5 h-5 text-white flex-shrink-0" />
-                                                <span className="text-sm text-gray-200">+91 9090 939193</span>
+                                                <a
+                                                    href="tel:+919090939193"
+                                                    className="text-sm text-gray-200">+91 9090 939193</a>
                                             </div>
                                             <div className="flex items-center space-x-3">
                                                 <Mail className="w-5 h-5 text-white flex-shrink-0" />
-                                                <span className="text-sm text-gray-200"> hello@belvorealty.com</span>
+                                                <a
+                                                    href="mailto:hello@belvorealty.com"
+                                                    className="text-sm text-gray-200"> hello@belvorealty.com</a>
                                             </div>
                                         </div>
                                     </div>
@@ -188,7 +192,7 @@ const Footer: React.FC = () => {
                         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                             <div className="flex items-center space-x-2">
                                 <p className="text-sm text-gray-200">
-                                    Copyright © 2025 <span className="text-[#AA8453]">Belvo Realty</span> All Rights Reserved
+                                    Copyright © 2025 <span className="text-[#AA8453]">Belvo Realty</span> All Rights Reserved | Designed by <a href="https://desirediv.com" target="_blank" className="text-[#AA8453]">Desire Div</a>
                                 </p>
                             </div>
                             <div className="flex space-x-6 text-sm text-gray-200">
