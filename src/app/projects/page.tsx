@@ -273,7 +273,7 @@ export default function ProjectsPage() {
                                         </div>
 
                                         {/* status pill top-right */}
-                                        <div className="absolute top-6 right-6">
+                                        <div className="absolute top-6 right-6 hidden md:block">
                                             <span
                                                 className={[
                                                     "px-3 py-1 text-xs font-bold rounded-full",
