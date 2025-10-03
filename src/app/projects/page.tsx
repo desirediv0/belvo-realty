@@ -1,12 +1,12 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useMemo, useState, useEffect, useRef } from "react"
 import Image, { StaticImageData } from "next/image"
 import { motion, type Variants } from "framer-motion"
 import { X, MapPin, ArrowRight } from "lucide-react"
 import HeroPage from "@/components/HeroPage"
 import HeadText from "@/components/Head-text"
-import { ShowcaseSection } from "@/assets/inedex"
+import { godrej, hero, ShowcaseSection } from "@/assets/inedex"
 
 type Project = {
     id: number
@@ -48,7 +48,7 @@ const projects: Project[] = [
         location: "Sector 104, Dwarka Expressway",
         type: "Residential",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: hero,
         details: [
             "Underconstruction",
             "11 Acres",
@@ -153,7 +153,7 @@ const projects: Project[] = [
         location: "Sector 53, Golf Course Road",
         type: "Residential",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: godrej,
         details: [
             "Underconstruction",
             "3.7 Acres",
@@ -185,6 +185,30 @@ const projects: Project[] = [
 export default function ProjectsPage() {
     const [selected, setSelected] = useState<number | null>(null)
     const sorted = useMemo(() => [...projects].sort((a, b) => a.order - b.order), [])
+    const modalRef = useRef<HTMLDivElement | null>(null)
+    const detailsRef = useRef<HTMLDivElement | null>(null)
+
+    // When modal opens, reset internal scrolls and lock body scroll
+    useEffect(() => {
+        if (selected !== null) {
+            // small timeout to ensure element exists after render
+            setTimeout(() => {
+                try {
+                    modalRef.current?.scrollTo({ top: 0, behavior: "auto" })
+                } catch { }
+                try {
+                    detailsRef.current?.scrollTo({ top: 0, behavior: "auto" })
+                } catch { }
+            }, 0)
+            // prevent background scroll
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "auto"
+        }
+        return () => {
+            document.body.style.overflow = "auto"
+        }
+    }, [selected])
 
     return (
         <main className="bg-white">
@@ -226,7 +250,7 @@ export default function ProjectsPage() {
                             >
                                 <div className="relative overflow-hidden bg-black">
                                     {/* Image */}
-                                    <div className="relative aspect-[4/5] overflow-hidden">
+                                    <div className="relative aspect-[4/6] overflow-hidden">
                                         <Image
                                             src={p.src || "/placeholder.svg"}
                                             alt={p.title}
@@ -296,7 +320,7 @@ export default function ProjectsPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+                            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 overflow-auto"
                             onClick={() => setSelected(null)}
                         >
                             <motion.div
@@ -304,24 +328,34 @@ export default function ProjectsPage() {
                                 animate={{ opacity: 1, scale: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.96, y: 20 }}
                                 transition={{ duration: 0.25 }}
-                                className="max-w-4xl w-full mx-auto bg-white overflow-hidden"
+                                className="max-w-5xl w-full mx-auto bg-white overflow-hidden flex flex-col md:flex-row relative max-h-[90vh]"
+                                ref={modalRef}
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                {/* Image */}
-                                <div className="relative aspect-[16/9] w-full bg-black">
-                                    <Image src={proj.src || "/placeholder.svg"} alt={proj.title} fill className="object-cover" />
-                                    <button
-                                        onClick={() => setSelected(null)}
-                                        className="absolute top-6 right-6 bg-black/20 backdrop-blur-sm text-white p-3 hover:bg-black/40 transition-colors"
-                                        aria-label="Close"
-                                    >
-                                        <X className="w-5 h-5" />
-                                    </button>
+                                {/* persistent close button (always visible) */}
+                                <button
+                                    onClick={() => setSelected(null)}
+                                    className="absolute top-3 right-3 z-50 bg-white/80 text-gray-800 p-2 rounded shadow-sm hover:bg-white"
+                                    aria-label="Close"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                                {/* Left: image (2/3) - prevent cropping by using object-contain and a limited max height */}
+                                <div className="w-full md:w-2/3 flex-shrink-0 bg-white flex items-center justify-center overflow-hidden h-[40vh] md:h-auto md:max-h-[80vh]">
+                                    <div className="w-full h-full flex items-center justify-center">
+                                        <Image
+                                            src={proj.src || "/placeholder.svg"}
+                                            alt={proj.title}
+                                            width={1200}
+                                            height={800}
+                                            className="object-contain max-h-full w-auto md:w-full"
+                                        />
+                                    </div>
                                 </div>
 
-                                {/* Content */}
-                                <div className="p-8 bg-white">
-                                    <div className="grid md:grid-cols-2 gap-8">
+                                {/* Right: details (1/3) - scrollable if content is tall */}
+                                <div className="p-6 md:p-8 bg-white w-full md:w-1/3 overflow-auto max-h-[50vh] md:max-h-[80vh]" ref={detailsRef}>
+                                    <div className="grid gap-8">
                                         <div>
                                             <span className="text-xs tracking-[0.2em] uppercase font-bold text-gray-500 mb-2 block">
                                                 {proj.type}

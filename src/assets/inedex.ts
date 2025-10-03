@@ -7,5 +7,9 @@ import luxury2 from "./luxury2.jpg";
 
 import luxuryvisiondesktop from "./luxury-vision-desktop.jpg"
 
+// projects 
+import godrej from "./project/godrej.jpeg";
+import hero from "./project/hero.jpg";
 
-export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop };
+
+export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop, godrej, hero };
