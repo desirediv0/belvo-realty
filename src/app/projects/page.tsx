@@ -6,7 +6,7 @@ import { motion, type Variants } from "framer-motion"
 import { X, MapPin, ArrowRight } from "lucide-react"
 import HeroPage from "@/components/HeroPage"
 import HeadText from "@/components/Head-text"
-import { godrej, hero, ShowcaseSection } from "@/assets/inedex"
+import { Elan, godrej, hero, ShowcaseSection } from "@/assets/inedex"
 
 type Project = {
     id: number
@@ -92,7 +92,7 @@ const projects: Project[] = [
         location: "Sector 49, Sohna Road",
         type: "Residential",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: Elan,
         details: ["Underconstruction", "6.5 Acres", "5 Towers | 350 units", "4BHK", "4200 sqft", "9 Cr onwards"],
     },
     {
