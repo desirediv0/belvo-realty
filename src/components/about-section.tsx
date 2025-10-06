@@ -120,7 +120,7 @@ const AboutSection = () => {
                                 height={1200}
                             />
                             {/* Overlay Logo */}
-                            <div className="absolute inset-0 bg-black/25 flex items-center justify-center">
+                            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/25 flex items-center justify-center">
                                 <motion.div
                                     variants={logoVariants}
                                     className="text-[#D3B88F] libreCaslonDisplay text-5xl md:text-6xl font-medium tracking-widest uppercase opacity-95"

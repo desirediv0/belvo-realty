@@ -43,50 +43,50 @@ const Footer: React.FC = () => {
         {
             title: "ABOUT US",
             links: [
-                { label: "About The Company", href: "/about" },
-                { label: "Belvo Foundation", href: "/foundation" },
-                { label: "Belvo Core", href: "/core" },
-                { label: "News & Events", href: "/news" },
-                { label: "Careers", href: "/careers" },
+                { label: "About The Company", href: "#" },
+                { label: "Belvo Foundation", href: "#" },
+                { label: "Belvo Core", href: "#" },
+                { label: "News & Events", href: "#" },
+                { label: "Careers", href: "#" },
             ],
         },
         {
             title: "PROJECTS",
             links: [
-                { label: "Residential Projects", href: "/projects/residential" },
-                { label: "Commercial Projects", href: "/projects/commercial" },
-                { label: "Hospitality Projects", href: "/projects/hospitality" },
-                { label: "Upcoming Projects", href: "/projects/upcoming" },
-                { label: "Completed Projects", href: "/projects/completed" },
+                { label: "Residential Projects", href: "#" },
+                { label: "Commercial Projects", href: "#" },
+                { label: "Hospitality Projects", href: "#" },
+                { label: "Upcoming Projects", href: "#" },
+                { label: "Completed Projects", href: "#" },
             ],
         },
         {
             title: "NEWS & EVENTS",
             links: [
-                { label: "Awards & Accolades", href: "/awards" },
-                { label: "News & Events", href: "/news" },
-                { label: "Media & PR", href: "/media" },
-                { label: "Press Releases", href: "/press" },
-                { label: "Gallery", href: "/gallery" },
+                { label: "Awards & Accolades", href: "#" },
+                { label: "News & Events", href: "#" },
+                { label: "Media & PR", href: "#" },
+                { label: "Press Releases", href: "#" },
+                { label: "Gallery", href: "#" },
             ],
         },
         {
             title: "CONTACT US",
             links: [
-                { label: "Get In Touch", href: "/contact" },
-                { label: "Schedule Visit", href: "/schedule" },
-                { label: "Customer Support", href: "/support" },
-                { label: "Investor Relations", href: "/investors" },
-                { label: "Partnership", href: "/partnership" },
+                { label: "Get In Touch", href: "#" },
+                { label: "Schedule Visit", href: "#" },
+                { label: "Customer Support", href: "#" },
+                { label: "Investor Relations", href: "#" },
+                { label: "Partnership", href: "#" },
             ],
         },
     ]
 
     const socialLinks = [
-        { icon: Facebook, href: "https://facebook.com/belvorealty", label: "Facebook" },
-        { icon: Instagram, href: "https://instagram.com/belvorealty", label: "Instagram" },
-        { icon: Linkedin, href: "https://linkedin.com/company/belvorealty", label: "LinkedIn" },
-        { icon: Twitter, href: "https://twitter.com/belvorealty", label: "Twitter" },
+        { icon: Facebook, href: "#", label: "Facebook" },
+        { icon: Instagram, href: "#", label: "Instagram" },
+        { icon: Linkedin, href: "#", label: "LinkedIn" },
+        { icon: Twitter, href: "#", label: "Twitter" },
     ]
 
     return (
