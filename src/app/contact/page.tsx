@@ -102,7 +102,7 @@ export default function ContactPage() {
                                 <div className="w-full rounded-lg overflow-hidden shadow">
                                     <div className="w-full h-48 sm:h-64">
                                         <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.7503835881284!2d76.96075877528284!3d28.47086987575338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d17957da3b1e7%3A0xe31b6d39c72cc555!2sDesire%20Div%20%7C%20Website%20Designing%20Company%20in%20Gurgaon!5e1!3m2!1sen!2sin!4v1758627903013!5m2!1sen!2sin"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.745546418237!2d76.9600690752829!3d28.47102317575326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1771caca6cf1%3A0xb743a750f8c9e9b1!2sBelvo%20Realty!5e1!3m2!1sen!2sin!4v1759749096189!5m2!1sen!2sin"
                                             title="Belvo Realty Office Location"
                                             className="w-full h-full border-0"
                                             allowFullScreen
