@@ -85,15 +85,15 @@ export default function ContactPage() {
 
 
                                 <div className="p-6 border rounded-lg">
-                                    <h4 className="font-semibold mb-2">Head Office</h4>
+                                    <h4 className="mb-2">Head Office</h4>
                                     <p className="text-sm text-gray-600">Office No.- 649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</p>
-                                    <a href="tel:+919090939193" className="text-sm text-slate-900 block mt-2">+91 9090 939193</a>
-                                    <a href="mailto:hello@belvorealty.com" className="text-sm text-slate-900 block mt-1">hello@belvorealty.com</a>
+                                    <a href="tel:+919090939193" className="text-sm text-gray-600 block mt-2">+91 9090 939193</a>
+                                    <a href="mailto:hello@belvorealty.com" className="text-sm text-gray-600  block mt-1">hello@belvorealty.com</a>
                                 </div>
                             </div>
 
                             <div className="mt-6">
-                                <h4 className="font-semibold">Office Hours</h4>
+                                <h4>Office Hours</h4>
                                 <p className="text-sm text-gray-600">Mon - Sat: 9:00 AM - 7:00 PM</p>
                             </div>
 
