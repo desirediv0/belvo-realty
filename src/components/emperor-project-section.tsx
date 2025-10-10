@@ -81,7 +81,7 @@ export default function EmperorProjectSection() {
                     className="max-w-7xl mx-auto"
                 >
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <motion.div variants={itemVariants} className="space-y-8">
+                        <motion.div variants={itemVariants} className="space-y-4 md:space-y-8">
                             <div className="space-y-6">
                                 <motion.div variants={itemVariants} className="inline-block">
                                     <span className="px-4 py-2 bg-black text-[#D3B88F] text-sm font-medium ">
