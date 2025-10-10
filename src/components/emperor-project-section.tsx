@@ -91,7 +91,7 @@ export default function EmperorProjectSection() {
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl libreCaslonDisplay text-neutral-800 leading-tight text-balance">
                                     Belvo The Emperor
                                 </h2>
-                                <p className="md:text-xl text-neutral-600 leading-relaxed">
+                                <p className="md:text-lg text-neutral-600 leading-relaxed">
                                     The Only Project of Dwarka Expressway on the Global Map
                                 </p>
                             </div>
