@@ -62,7 +62,7 @@ const HeadText = ({
                 </motion.span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <motion.p variants={item} className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 {description}
             </motion.p>
         </motion.div>

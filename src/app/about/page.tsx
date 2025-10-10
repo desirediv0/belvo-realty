@@ -62,7 +62,7 @@ export default function AboutPage() {
 
                         {/* Introduction */}
                         <motion.div variants={itemVariants} className="max-w-4xl mx-auto text-center mb-16">
-                            <p className="text-xl leading-relaxed text-gray-700 mb-8">
+                            <p className="text-lg leading-relaxed text-gray-600 mb-8">
                                 At <strong>Belvo Realty</strong>, we believe real estate is not just about transactions—it&apos;s about <strong>trust, insight, and creating long-term value</strong>. With a foundation built on years of developer-side expertise, we bring unmatched clarity and confidence to every property decision.
                             </p>
                             <p className="text-lg leading-relaxed text-gray-600">
