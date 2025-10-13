@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Twitter, Phone, Mail, MapPin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter, } from "lucide-react"
 
 interface FooterLink {
     label: string
@@ -39,45 +39,15 @@ const itemVariants = {
 
 
 const Footer: React.FC = () => {
+    // Only keep real pages that are present in the navbar
     const footerSections: FooterSection[] = [
         {
-            title: "ABOUT US",
+            title: "PAGES",
             links: [
-                { label: "About The Company", href: "#" },
-                { label: "Belvo Foundation", href: "#" },
-                { label: "Belvo Core", href: "#" },
-                { label: "News & Events", href: "#" },
-                { label: "Careers", href: "#" },
-            ],
-        },
-        {
-            title: "PROJECTS",
-            links: [
-                { label: "Residential Projects", href: "#" },
-                { label: "Commercial Projects", href: "#" },
-                { label: "Hospitality Projects", href: "#" },
-                { label: "Upcoming Projects", href: "#" },
-                { label: "Completed Projects", href: "#" },
-            ],
-        },
-        {
-            title: "NEWS & EVENTS",
-            links: [
-                { label: "Awards & Accolades", href: "#" },
-                { label: "News & Events", href: "#" },
-                { label: "Media & PR", href: "#" },
-                { label: "Press Releases", href: "#" },
-                { label: "Gallery", href: "#" },
-            ],
-        },
-        {
-            title: "CONTACT US",
-            links: [
-                { label: "Get In Touch", href: "#" },
-                { label: "Schedule Visit", href: "#" },
-                { label: "Customer Support", href: "#" },
-                { label: "Investor Relations", href: "#" },
-                { label: "Partnership", href: "#" },
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about" },
+                { label: "Projects", href: "/projects" },
+                { label: "Contact", href: "/contact" },
             ],
         },
     ]
@@ -109,103 +79,68 @@ const Footer: React.FC = () => {
                 {/* Main Footer Content */}
                 <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                            {footerSections.map((section) => (
-                                <motion.div key={section.title} variants={itemVariants}>
-                                    <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">
-                                        {section.title}
-                                        <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
-                                    </h3>
-                                    <ul className="space-y-3">
-                                        {section.links.map((link) => (
-                                            <li key={link.label}>
-                                                <a
-                                                    href={link.href}
-                                                    className="text-gray-200 hover:text-[#AA8453] transition-colors duration-200 text-sm leading-relaxed"
-                                                >
-                                                    {link.label}
-                                                </a>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </motion.div>
-                            ))}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+                            {/* Pages */}
+                            <motion.div variants={itemVariants}>
+                                <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">{footerSections[0].title}
+                                    <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
+                                </h3>
+                                <ul className="space-y-3">
+                                    {footerSections[0].links.map((link) => (
+                                        <li key={link.label}>
+                                            <a href={link.href} className="text-gray-200 hover:text-[#AA8453] transition-colors duration-200 text-sm leading-relaxed">
+                                                {link.label}
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </motion.div>
+
+                            {/* Contact Info (kept real) */}
+                            <motion.div variants={itemVariants}>
+                                <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">CONTACT
+                                    <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
+                                </h3>
+                                <div className="space-y-3 text-sm text-gray-200">
+                                    <div>649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</div>
+                                    <div><a href="tel:+919090939193" className="hover:text-[#AA8453]">+91 9090 939193</a></div>
+                                    <div><a href="mailto:hello@belvorealty.com" className="hover:text-[#AA8453]">hello@belvorealty.com</a></div>
+                                </div>
+                            </motion.div>
+
+                            {/* Social */}
+                            <motion.div variants={itemVariants}>
+                                <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">FOLLOW US
+                                    <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
+                                </h3>
+                                <div className="flex space-x-4">
+                                    {socialLinks.map((social) => (
+                                        <motion.a
+                                            key={social.label}
+                                            href={social.href}
+                                            whileHover={{ scale: 1.05 }}
+                                            className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-[#AA8453] transition-all duration-300"
+                                            aria-label={social.label}
+                                        >
+                                            <social.icon className="w-4 h-4 text-white" />
+                                        </motion.a>
+                                    ))}
+                                </div>
+                            </motion.div>
                         </div>
 
                         {/* Contact Information */}
-                        <motion.div variants={itemVariants} className="mt-16 pt-12 border-t border-black/50">
-                            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                                <div className="lg:col-span-2">
-                                    <h3 className="text-xl font-semibold mb-6 text-[#AA8453]">Get In Touch</h3>
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="flex items-start space-x-3">
-                                            <MapPin className="w-5 h-5 text-white mt-1 flex-shrink-0" />
-                                            <div>
-                                                <p className="text-sm text-gray-200 leading-relaxed">
-                                                    649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="space-y-3">
-                                            <div className="flex items-center space-x-3">
-                                                <Phone className="w-5 h-5 text-white flex-shrink-0" />
-                                                <a
-                                                    href="tel:+919090939193"
-                                                    className="text-sm text-gray-200">+91 9090 939193</a>
-                                            </div>
-                                            <div className="flex items-center space-x-3">
-                                                <Mail className="w-5 h-5 text-white flex-shrink-0" />
-                                                <a
-                                                    href="mailto:hello@belvorealty.com"
-                                                    className="text-sm text-gray-200"> hello@belvorealty.com</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                {/* Social Media */}
-                                <div>
-                                    <h3 className="text-xl font-semibold mb-6 text-[#AA8453]">Follow Us</h3>
-                                    <div className="flex space-x-4">
-                                        {socialLinks.map((social) => (
-                                            <motion.a
-                                                key={social.label}
-                                                href={social.href}
-                                                whileHover={{ scale: 1.1 }}
-                                                whileTap={{ scale: 0.95 }}
-                                                className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20  flex items-center justify-center hover:bg-[#AA8453] hover:border-white transition-all duration-300 group"
-                                                aria-label={social.label}
-                                            >
-                                                <social.icon className="w-4 h-4 text-white group-hover:text-gray-200 transition-colors" />
-                                            </motion.a>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
                 <motion.div variants={itemVariants} className="border-t border-black/50 py-8">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                            <div className="flex items-center space-x-2">
-                                <p className="text-sm text-gray-200">
-                                    Copyright © 2025 <span className="text-[#AA8453]">Belvo Realty</span> All Rights Reserved | Designed by <a href="https://desirediv.com" target="_blank" className="text-[#AA8453]">Desire Div</a>
-                                </p>
-                            </div>
-                            <div className="flex space-x-6 text-sm text-gray-200">
-                                <a href="/privacy" className="hover:text-[#AA8453] transition-colors">
-                                    Privacy Policy
-                                </a>
-                                <a href="/terms" className="hover:text-[#AA8453] transition-colors">
-                                    Terms & Conditions
-                                </a>
-                                <a href="/disclaimer" className="hover:text-[#AA8453] transition-colors">
-                                    Disclaimer
-                                </a>
-                            </div>
+                        <div className="text-center">
+                            <p className="text-sm text-gray-200">
+                                Copyright © 2025 <span className="text-[#AA8453]">Belvo Realty</span> All Rights Reserved.
+                            </p>
                         </div>
                     </div>
                 </motion.div>
