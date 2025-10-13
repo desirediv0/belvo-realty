@@ -2,10 +2,11 @@
   "name": "belvo-realty",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "cross-env NODE_ENV=production node server.ts",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "@tabler/icons-react": "^3.35.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
     "framer-motion": "^12.23.18",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
