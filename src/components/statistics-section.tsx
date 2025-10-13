@@ -51,7 +51,7 @@ const CountUpNumber = ({ end, duration = 2500, suffix = "" }: { end: number; dur
     }, [isInView, end, duration, hasStarted])
 
     return (
-        <span ref={ref}>
+        <span ref={ref} >
             {count.toLocaleString()}
             {suffix}
         </span>
@@ -76,17 +76,18 @@ export default function StatisticsSection() {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     className="max-w-7xl mx-auto"
+
                 >
                     {/* Statistics Cards */}
                     <motion.div variants={itemVariants} className="grid grid-cols-3 gap-3 md:gap-8 mb-10 ">
                         {[
-                            { value: 5000, suffix: '+', label: 'Happy Customers', },
-                            { value: 12, suffix: 'M sq.ft+', label: 'Under Development' },
-                            { value: 12000, suffix: ' Cr+', label: 'Planned Investment', },
-                        ].map((s: { value: number; suffix: string; label: string; icon?: string }, i: number) => (
+                            { display: 100, suffix: '+', label: 'CLIENT CENTRIC APPROACH' },
+                            { display: 'EXCLUSIVE DEVELOPER', suffix: '', label: 'PARTNERSHIPS' },
+                            { display: 'End to End', suffix: '', label: 'PROPERTY JOLUTION' },
+                        ].map((s: { display: number | string; suffix?: string; label: string }, i: number) => (
                             <motion.div
                                 key={i}
-                                className="group bg-transparent text-black py-4 md:py-0 md:p-8 relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                                className="group bg-transparent text-black py-4 md:py-2 md:p-8 relative overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                                 whileHover={{ y: -5 }}
                             >
                                 {/* subtle overlay kept transparent */}
@@ -101,13 +102,11 @@ export default function StatisticsSection() {
 
                                     </div>
 
-                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-medium text-[#AA8453] mb-4 libreCaslonDisplay tracking-wider">
-                                        {s.label === 'Planned Investment' ? (
-                                            <>
-                                                ₹<CountUpNumber end={s.value} suffix={` ${s.suffix}`} />
-                                            </>
+                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-medium text-[#AA8453] mb-4  tracking-wider">
+                                        {typeof s.display === 'number' ? (
+                                            <CountUpNumber end={s.display as number} suffix={s.suffix || ''} />
                                         ) : (
-                                            <CountUpNumber end={s.value} suffix={s.suffix} />
+                                            <span className="uppercase text-lg">{s.display}</span>
                                         )}
                                     </div>
 
@@ -127,33 +126,34 @@ export default function StatisticsSection() {
                             </div>
 
                             <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-black mb-8 leading-none tracking-tight">
-                                BELVO THE
-                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-600">EMPEROR</span>
+                                BELVO REALTY
+                                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-600 uppercase">
+                                    Advantage
+                                </span>
                             </h2>
 
                             <div className="w-2 h-12 bg-black mx-auto mb-8"></div>
 
                             <p className="text-xl md:text-2xl text-black font-medium mb-6 leading-relaxed">
-                                A Landmark on <span className="font-bold">Dwarka Expressway</span>
+
+                                Your Gateway to Exceptional   <span className="font-bold">Real Estate</span> {" "}Opportunities
                             </p>
 
-                            <div className="grid md:grid-cols-2 gap-4 md:gap-12 mt-8 md:mt-16">
+                            <div className="grid md:grid-cols-2 gap-4 md:gap-12 mt-8 md:mt-14">
                                 <div className="text-left">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                                        Belvo The Emperor is the most sought-after residential address in Gurugram&apos;s epicentre — Dwarka Expressway, located in Sector 106.
+                                        Belvo Realty is a boutique
+                                        real estate advisory firme
+                                        with the most exclusive
+                                        residential, commercial &
+                                        investment properties.
                                     </p>
                                 </div>
                                 <div className="text-left">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                                        Designed by globally recognized consultants to offer unmatched luxury, world-class amenities, and investment-grade developments.
+                                        with a client-first approach, deep market expersise, and access to top developers, we deliver transparent transaction, export guidance. kpremium opportunitie.
                                     </p>
                                 </div>
-                            </div>
-
-                            <div className="mt-16 flex items-center justify-center space-x-8">
-                                <div className="w-16 h-px bg-black"></div>
-                                <span className="text-[#D3B88F] font-bold text-sm tracking-widest uppercase">PREMIUM LIVING</span>
-                                <div className="w-16 h-px bg-black"></div>
                             </div>
                         </div>
                     </motion.div>

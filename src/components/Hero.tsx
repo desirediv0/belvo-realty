@@ -65,7 +65,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1 }}
-                className="absolute bottom-10 md:bottom-28 left-0 transform -translate-x-1/2 z-20 w-full px-4"
+                className="absolute bottom-20 md:bottom-32 left-0 transform -translate-x-1/2 z-20 w-full px-4"
             >
                 <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-6 md:gap-4">
                     <div>
