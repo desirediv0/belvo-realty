@@ -47,18 +47,18 @@ export default function EmperorProjectSection() {
     const features = [
         {
             icon: Building2,
-            title: "Architectural Excellence",
-            description: "World-class design by internationally acclaimed architects",
+            title: "Personalised Advisory",
+            description: "Tailored property recommendations aligned with your lifestyle and investment goals.",
         },
         {
             icon: Users,
-            title: "Premium Lifestyle",
-            description: "Exclusive amenities and services for discerning residents",
+            title: "Exclusive Access",
+            description: "Early access to top-tier residential, commercial, and hospitality projects from leading developers.",
         },
         {
             icon: TrendingUp,
-            title: "Investment Potential",
-            description: "Prime location ensuring exceptional returns and appreciation",
+            title: "Growth-Driven Investments",
+            description: "Strategic insights and prime opportunities designed for long-term returns and appreciation.",
         },
     ]
 
@@ -85,21 +85,20 @@ export default function EmperorProjectSection() {
                             <div className="space-y-6">
                                 <motion.div variants={itemVariants} className="inline-block">
                                     <span className="px-4 py-2 bg-black text-[#D3B88F] text-sm font-medium ">
-                                        Flagship Project
+                                        OUR EXPERTISE
                                     </span>
                                 </motion.div>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl libreCaslonDisplay text-neutral-800 leading-tight text-balance">
                                     Belvo The Emperor
                                 </h2>
                                 <p className="md:text-lg text-neutral-600 leading-relaxed">
-                                    The Only Project of Dwarka Expressway on the Global Map
+                                    Redefining Real Estate Advisory with Trust & Excellence
                                 </p>
                             </div>
 
                             <motion.div variants={itemVariants} className="space-y-6">
                                 <p className="md:text-lg text-neutral-600 leading-relaxed">
-                                    Belvo The Emperor is the Most Sought-After Residential Address Right in Gurugram&apos;s Epicentre - Dwarka
-                                    Expressway, Located in Sector 106. Globally-Recognized Consultants are Creating this Marvel.
+                                    Belvo Realty is a new-age real estate consultancy committed to delivering premium property solutions across Gurugram and beyond. Our mission is to guide clients through every step — from property discovery and market analysis to negotiation and final transaction — with complete transparency and trust.
                                 </p>
 
                                 <div className="space-y-4">
