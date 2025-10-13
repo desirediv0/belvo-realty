@@ -151,18 +151,7 @@ export default function LuxuryVisionSection() {
                             <div className="absolute bottom-0 right-0 w-16 h-16 border-r-4 border-b-4 border-white opacity-60"></div>
                         </div>
 
-                        {/* Image overlay text */}
-                        <div className="absolute bottom-8 left-8 right-8">
-                            <div className="flex items-end justify-between">
-                                <div>
-                                    <div className="w-12 h-px bg-white mb-4"></div>
-                                    <p className="text-white font-bold text-lg tracking-wider uppercase">ARCHITECTURAL MASTERY</p>
-                                </div>
-                                <div className="text-right">
-                                    <p className="text-white opacity-80 text-sm">DEFINING THE FUTURE</p>
-                                </div>
-                            </div>
-                        </div>
+
                     </motion.div>
 
                 </motion.div>

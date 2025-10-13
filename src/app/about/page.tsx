@@ -57,7 +57,7 @@ export default function AboutPage() {
                             heading="ABOUT BELVO"
                             subheadingfirstline="CRAFTED"
                             subheadingsecondline="FOR LIVING"
-                            description="Belvo Realty blends modern architecture, sustainable practices and premium amenities to create homes and investments that stand the test of time."
+                            description="Blends modern architecture, sustainable practices and premium amenities to create homes and investments that stand the test of time."
                         />
 
                         {/* Introduction */}
@@ -155,7 +155,7 @@ export default function AboutPage() {
                                     </div>
                                     <h3 className="text-2xl font-bold text-black">Our Vision</h3>
                                 </div>
-                                <p className="text-gray-700 leading-relaxed text-lg">
+                                <p className="text-gray-700 leading-relaxed text-base">
                                     To be the most trusted and forward-looking real estate partner, where every client feels empowered, informed, and secure in their property decisions. We envision a future where real estate is not just about spaces, but about building confidence, opportunities, and lasting relationships.
                                 </p>
                             </div>
@@ -171,19 +171,19 @@ export default function AboutPage() {
                                 <ul className="space-y-3 text-gray-700">
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-[#AA8453] mt-2 flex-shrink-0"></div>
-                                        <span>Create a client experience rooted in clarity, professionalism, and care</span>
+                                        <span className="text-gray-700 leading-relaxed text-base">Create a client experience rooted in clarity, professionalism, and care</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-[#AA8453] mt-2 flex-shrink-0"></div>
-                                        <span>Guide every property journey with insight, foresight, and responsibility</span>
+                                        <span className="text-gray-700 leading-relaxed text-base">Guide every property journey with insight, foresight, and responsibility</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-[#AA8453] mt-2 flex-shrink-0"></div>
-                                        <span>Shape real estate as a service industry that delivers value beyond transactions</span>
+                                        <span className="text-gray-700 leading-relaxed text-base">Shape real estate as a service industry that delivers value beyond transactions</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-[#AA8453] mt-2 flex-shrink-0"></div>
-                                        <span>Continually adapt and innovate, keeping our clients ahead in a changing market</span>
+                                        <span className="text-gray-700 leading-relaxed text-base">Continually adapt and innovate, keeping our clients ahead in a changing market</span>
                                     </li>
                                 </ul>
                             </div>

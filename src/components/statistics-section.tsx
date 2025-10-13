@@ -81,7 +81,7 @@ export default function StatisticsSection() {
                     {/* Statistics Cards */}
                     <motion.div variants={itemVariants} className="grid grid-cols-3 gap-3 md:gap-8 mb-10 ">
                         {[
-                            { display: 100, suffix: '+', label: 'CLIENT CENTRIC APPROACH' },
+                            { display: 100, suffix: '%', label: 'CLIENT CENTRIC APPROACH' },
                             { display: 'EXCLUSIVE DEVELOPER', suffix: '', label: 'PARTNERSHIPS' },
                             { display: 'End to End', suffix: '', label: 'PROPERTY JOLUTION' },
                         ].map((s: { display: number | string; suffix?: string; label: string }, i: number) => (
@@ -110,7 +110,7 @@ export default function StatisticsSection() {
                                         )}
                                     </div>
 
-                                    <p className="text-black opacity-90 font-medium text-xs md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
+                                    <p className="text-[#AA8453] opacity-90 font-medium text-xs md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -143,7 +143,7 @@ export default function StatisticsSection() {
                                 <div className="text-left">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                                         Belvo Realty is a boutique
-                                        real estate advisory firme
+                                        real estate advisory firm
                                         with the most exclusive
                                         residential, commercial &
                                         investment properties.
@@ -151,7 +151,7 @@ export default function StatisticsSection() {
                                 </div>
                                 <div className="text-left">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                                        with a client-first approach, deep market expersise, and access to top developers, we deliver transparent transaction, export guidance. kpremium opportunitie.
+                                        with a client-first approach, deep market expersise, and access to top developers, we deliver transparent transaction, export guidance, premium opportunitie.
                                     </p>
                                 </div>
                             </div>

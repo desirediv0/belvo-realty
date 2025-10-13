@@ -3,10 +3,9 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { ArrowRight, Building2, Users, TrendingUp } from "lucide-react"
+import { Building2, Users, TrendingUp } from "lucide-react"
 import { luxury } from "@/assets/inedex"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,7 +43,6 @@ const featureVariants = {
 export default function EmperorProjectSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-50px" })
-    const route = useRouter()
 
     const features = [
         {
@@ -55,7 +53,7 @@ export default function EmperorProjectSection() {
         {
             icon: Users,
             title: "Exclusive Access",
-            description: "Early access to top-tier residential, commercial, and hospitality projects from leading developers.",
+            description: "Early access to top-tier residential and commercial projects from leading developers.",
         },
         {
             icon: TrendingUp,
@@ -91,11 +89,9 @@ export default function EmperorProjectSection() {
                                     </span>
                                 </motion.div>
                                 <h2 className="text-4xl md:text-5xl lg:text-6xl libreCaslonDisplay text-neutral-800 leading-tight text-balance">
-                                    Belvo The Emperor
-                                </h2>
-                                <p className="md:text-lg text-neutral-600 leading-relaxed">
                                     Redefining Real Estate Advisory with Trust & Excellence
-                                </p>
+                                </h2>
+
                             </div>
 
                             <motion.div variants={itemVariants} className="space-y-6">
@@ -122,17 +118,7 @@ export default function EmperorProjectSection() {
                                 </div>
                             </motion.div>
 
-                            <motion.div variants={itemVariants}>
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={() => route.push('/contact')}
-                                    className="inline-flex items-center space-x-2 bg-neutral-900 text-[#D3B88F] px-8 py-4 hover:bg-neutral-800 transition-colors duration-300 group"
-                                >
-                                    <span className="font-medium">Explore The Emperor</span>
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                                </motion.button>
-                            </motion.div>
+
                         </motion.div>
 
                         <motion.div variants={itemVariants} className="relative">

@@ -69,12 +69,12 @@ const Hero = () => {
             >
                 <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-6 md:gap-4">
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white">20+</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">50+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Projects</div>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white">10+</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">30+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">
                             Developers</div>
                     </div>
@@ -83,7 +83,7 @@ const Hero = () => {
                         <div className="libreCaslonDisplay text-2xl font-normal text-white uppercase">
                             Gurgaon
                         </div>
-                        <div className="text-xs text-white/70 uppercase tracking-wider">
+                        <div className=" text-white/70 text-2xl uppercase tracking-wider">
                             Global
                         </div>
                     </div>

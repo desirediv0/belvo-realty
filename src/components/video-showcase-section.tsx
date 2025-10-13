@@ -74,19 +74,19 @@ const VideoShowcaseSection = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
-                className="relative z-10 min-h-[60vh] md:min-h-[85vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+                className="relative z-10 min-h-[60vh] md:min-h-[70vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
             >
                 <div className="text-center space-y-8 max-w-4xl mx-auto">
                     <motion.p variants={itemVariants} className="text-white/90 text-sm font-medium tracking-[0.2em] uppercase">
                         A DECADE OF TRUST
                     </motion.p>
 
-                    <motion.h2
+                    {/* <motion.h2
                         variants={itemVariants}
                         className="libreCaslonDisplay text-4xl md:text-7xl lg:text-8xl font-light text-[#D3B88F] tracking-wide"
                     >
                         BELVO REALTY
-                    </motion.h2>
+                    </motion.h2> */}
 
                     <motion.p
                         variants={itemVariants}

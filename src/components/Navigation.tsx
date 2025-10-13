@@ -5,7 +5,6 @@ import {
     SheetContent,
     SheetDescription,
     SheetHeader,
-    SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
 import {
@@ -111,10 +110,9 @@ const Navigation = () => {
                             className="bg-black/60 backdrop-blur-md border border-gray-800 shadow-xl data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left data-[state=closed]:duration-500 data-[state=open]:duration-500"
                         >
                             <SheetHeader>
-                                <SheetTitle className="text-2xl font-bold text-gray-200 mb-2">Belvo Realty</SheetTitle>
                                 <SheetDescription>
                                     <motion.div
-                                        className="flex flex-col gap-3 mt-4 items-end"
+                                        className="flex flex-col gap-3 mt-20 items-end"
                                         variants={containerVariants}
                                         initial="hidden"
                                         animate="show"

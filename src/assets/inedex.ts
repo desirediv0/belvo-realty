@@ -16,5 +16,6 @@ import experion from "./project/experion.jpeg";
 import max from "./project/max.jpeg";
 import omaxechandnichowk from "./project/omaxe-chandni-chowk.jpeg";
 import omaxedwarka from "./project/omaxe-dwarka.jpg";
+import adani from "./project/adani.jpeg";
 
-export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop, godrej, hero, Elan, dlf, experion, max, omaxechandnichowk, omaxedwarka };
+export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop, godrej, hero, Elan, dlf, experion, max, omaxechandnichowk, omaxedwarka, adani };
