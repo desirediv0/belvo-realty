@@ -13,7 +13,7 @@ type Project = {
     order: number
     title: string
     location: string
-    type: "Residential" | "Commercial" | "Mixed Use" | "Luxury Apartments"
+    type: "Residential" | "Commercial" | "Mixed Use" | "Luxury Apartments" | "NEW Launch"
     status: "Under Construction" | "Ready to Move"
     // Keep images as-is (placeholders here). You can replace src per project later.
     src: string | StaticImageData | undefined
@@ -90,7 +90,7 @@ const projects: Project[] = [
         order: 4,
         title: "Elan",
         location: "Sector 49, Sohna Road",
-        type: "Residential",
+        type: "NEW Launch",
         status: "Under Construction",
         src: Elan,
         details: ["Underconstruction", "6.5 Acres", "5 Towers | 350 units", "4BHK", "4200 sqft", "9 Cr onwards"],
@@ -100,7 +100,7 @@ const projects: Project[] = [
         order: 5,
         title: "Max Estate 361",
         location: "Sector 36A, Dwarka Expressway",
-        type: "Residential",
+        type: "NEW Launch",
         status: "Under Construction",
         src: max,
         details: [
@@ -168,7 +168,7 @@ const projects: Project[] = [
         order: 9,
         title: "Adani",
         location: "Sector 102",
-        type: "Residential",
+        type: "NEW Launch",
         status: "Under Construction",
         src: adani,
         details: [
