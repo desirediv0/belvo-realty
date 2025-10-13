@@ -6,7 +6,7 @@ import { motion, type Variants } from "framer-motion"
 import { X, MapPin, ArrowRight } from "lucide-react"
 import HeroPage from "@/components/HeroPage"
 import HeadText from "@/components/Head-text"
-import { Elan, godrej, hero, ShowcaseSection } from "@/assets/inedex"
+import { dlf, Elan, experion, godrej, hero, max, omaxechandnichowk, omaxedwarka, ShowcaseSection } from "@/assets/inedex"
 
 type Project = {
     id: number
@@ -65,7 +65,7 @@ const projects: Project[] = [
         location: "DLF Phase 2 & Phase 3",
         type: "Residential",
         status: "Ready to Move",
-        src: ShowcaseSection,
+        src: dlf,
         details: ["Ready to move in", "5 to 8 Cr", "Stilt + 4 Floors"],
     },
     {
@@ -75,7 +75,7 @@ const projects: Project[] = [
         location: "Chandni Chowk, Delhi",
         type: "Commercial",
         status: "Ready to Move",
-        src: ShowcaseSection,
+        src: omaxechandnichowk,
         details: [
             "Ready to move (operational)",
             "4.5 Acres",
@@ -102,7 +102,7 @@ const projects: Project[] = [
         location: "Sector 36A, Dwarka Expressway",
         type: "Residential",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: max,
         details: [
             "Underconstruction",
             "18.23 Acres",
@@ -119,7 +119,7 @@ const projects: Project[] = [
         location: "Sector 19B, Dwarka",
         type: "Commercial",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: omaxedwarka,
         details: [
             "Under construction",
             "50.4",
@@ -136,7 +136,7 @@ const projects: Project[] = [
         location: "Sector 48, Sohna Road",
         type: "Residential",
         status: "Under Construction",
-        src: ShowcaseSection,
+        src: experion,
         details: [
             "Underconstruction",
             "5.5 Acres",

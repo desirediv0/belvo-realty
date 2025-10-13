@@ -232,30 +232,6 @@ export default function AboutPage() {
                             </div>
                         </motion.div>
 
-                        {/* Stats Section */}
-                        <motion.div variants={itemVariants} className="mb-16">
-                            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                                <div className="p-6 border border-black bg-white text-center">
-                                    <div className="text-3xl font-bold mb-2">15+</div>
-                                    <div className="text-sm uppercase tracking-wider text-gray-600">Years Experience</div>
-                                </div>
-
-                                <div className="p-6 border border-black bg-white text-center">
-                                    <div className="text-3xl font-bold mb-2">500+</div>
-                                    <div className="text-sm uppercase tracking-wider text-gray-600">Happy Clients</div>
-                                </div>
-
-                                <div className="p-6 border border-black bg-white text-center">
-                                    <div className="text-3xl font-bold mb-2">50+</div>
-                                    <div className="text-sm uppercase tracking-wider text-gray-600">Projects Completed</div>
-                                </div>
-
-                                <div className="p-6 border border-black bg-white text-center">
-                                    <div className="text-3xl font-bold mb-2">₹1000Cr+</div>
-                                    <div className="text-sm uppercase tracking-wider text-gray-600">Value Delivered</div>
-                                </div>
-                            </div>
-                        </motion.div>
 
                         {/* What We Do */}
                         <motion.div variants={itemVariants} className="mb-16">
