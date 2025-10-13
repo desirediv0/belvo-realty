@@ -106,7 +106,7 @@ export default function StatisticsSection() {
                                         {typeof s.display === 'number' ? (
                                             <CountUpNumber end={s.display as number} suffix={s.suffix || ''} />
                                         ) : (
-                                            <span className="uppercase text-lg">{s.display}</span>
+                                            <span className="uppercase text-base md:text-lg">{s.display}</span>
                                         )}
                                     </div>
 
