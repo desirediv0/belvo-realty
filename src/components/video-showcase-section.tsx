@@ -78,7 +78,7 @@ const VideoShowcaseSection = () => {
             >
                 <div className="text-center space-y-8 max-w-4xl mx-auto">
                     <motion.p variants={itemVariants} className="text-white/90 text-sm font-medium tracking-[0.2em] uppercase">
-                        A Decade of Success
+                        A DECADE OF TRUST
                     </motion.p>
 
                     <motion.h2
@@ -92,7 +92,7 @@ const VideoShowcaseSection = () => {
                         variants={itemVariants}
                         className="text-white/80 text-base md:text-xl leading-relaxed max-w-2xl mx-auto"
                     >
-                        Experience our journey of creating exceptional spaces that redefine luxury living and commercial excellence.
+                        Experience our journey of delivering exceptional property solutions that connect you with the finest luxury residences and commercial landmarks.
                     </motion.p>
 
                     {/* Play Button */}

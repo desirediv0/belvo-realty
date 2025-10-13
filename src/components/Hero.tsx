@@ -1,10 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
+import { useRouter } from "next/navigation"
 
 const Hero = () => {
+    const route = useRouter()
     return (
         <div className="relative min-h-screen overflow-hidden">
             <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
@@ -22,7 +24,7 @@ const Hero = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-sm lg:text-base font-medium text-white/80 mb-6 tracking-wider uppercase"
                     >
-                        15 Years of Excellence in Luxury Development
+                        THE FUTURE, REIMAGINED
                     </motion.p>
 
                     {/* Main Heading */}
@@ -36,17 +38,7 @@ const Hero = () => {
                         BELVO REALTY
                     </motion.h1>
 
-                    {/* Description */}
-                    {/* <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed text-pretty text-center"
-                        style={{ fontSize: 'clamp(1rem, 2.7vw, 1.25rem)' }}
-                    >
-                        Crafting exceptional living spaces where architectural innovation meets timeless elegance. Discover your
-                        next luxury investment opportunity.
-                    </motion.p> */}
+
 
                     {/* CTA Buttons */}
                     <motion.div
@@ -56,20 +48,14 @@ const Hero = () => {
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
                     >
                         <Button
+                            onClick={() => route.push('/projects')}
                             size="lg"
                             className="bg-white text-black hover:bg-white/90 px-8 py-6 text-base font-medium transition-all duration-300 hover:scale-105"
                         >
                             Explore Properties
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
-                        <Button
-                            variant="outline"
-                            size="lg"
-                            className="px-8 py-6 text-base font-medium bg-transparent border-white text-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-105"
-                        >
-                            <Play className="mr-2 h-5 w-5" />
-                            Watch Showcase
-                        </Button>
+
                     </motion.div>
                 </div>
             </div>
@@ -83,18 +69,23 @@ const Hero = () => {
             >
                 <div className="flex flex-col sm:flex-row items-center justify-center sm:space-x-8 text-center gap-6 md:gap-4">
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white">50+</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">20+</div>
                         <div className="text-xs text-white/70 uppercase tracking-wider">Projects</div>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white">₹16,600 Cr+</div>
-                        <div className="text-xs text-white/70 uppercase tracking-wider">Portfolio Value</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white">10+</div>
+                        <div className="text-xs text-white/70 uppercase tracking-wider">
+                            Developers</div>
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white">15</div>
-                        <div className="text-xs text-white/70 uppercase tracking-wider">Years</div>
+                        <div className="libreCaslonDisplay text-2xl font-normal text-white uppercase">
+                            Gurgaon
+                        </div>
+                        <div className="text-xs text-white/70 uppercase tracking-wider">
+                            Global
+                        </div>
                     </div>
                 </div>
             </motion.div>

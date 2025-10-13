@@ -4,7 +4,6 @@ import { modernluxuryrealestateofficeinteriorwithmar } from "@/assets/inedex"
 import { motion } from "framer-motion"
 import { FaHome, FaBuilding } from "react-icons/fa"
 import Image from "next/image"
-import { PiCallBellBold } from "react-icons/pi"
 
 const AboutSection = () => {
     const containerVariants = {
@@ -91,11 +90,6 @@ const AboutSection = () => {
             title: "Commercial",
             description: "Office spaces and retail",
         },
-        {
-            icon: PiCallBellBold,
-            title: "Hospitality",
-            description: "Hotels and resorts and more",
-        },
     ]
 
     return (
@@ -143,20 +137,18 @@ const AboutSection = () => {
 
                             <motion.h2
                                 variants={itemVariants}
-                                className="libreCaslonDisplay text-2xl md:text-4xl   leading-tight text-balance"
+                                className="libreCaslonDisplay text-2xl md:text-3xl   leading-tight text-balance"
                             >
-                                Belvo Realty Redefines Luxury In The World Of Real Estate With The Most Exclusive Residential,
-                                Commercial & Hospitality Projects.
+                                Belvo Realty Redefines Excellence In The World Of Real Estate Brokerage With The Most Curated Residential & Commercial Opportunities.
                             </motion.h2>
 
                             <motion.p variants={itemVariants} className="text-muted-foreground md:text-lg leading-relaxed max-w-2xl">
-                                Featuring Flawless Designs, A High Level Of Detailing, And Elegant Architecture. Each Project Is A
-                                Marvel In Itself - The Most Luxurious Experiences Await You When You Choose Belvo Properties.
+                                Delivering bespoke property solutions, unmatched market insights, and premium advisory services — every deal is crafted with precision and trust. The most seamless and rewarding real estate experiences await you when you partner with Belvo Realty.
                             </motion.p>
                         </div>
 
                         {/* Services Grid */}
-                        <motion.div variants={containerVariants} className="grid grid-cols-3 gap-2 md:gap-8 pt-8 items-start">
+                        <motion.div variants={containerVariants} className="grid grid-cols-2 gap-2 md:gap-8 pt-8 items-start">
                             {services.map((service) => (
                                 <motion.div
                                     key={service.title}
