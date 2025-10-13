@@ -13,17 +13,12 @@ const handle = app.getRequestHandler(); // Get the default request handler for N
 app
     .prepare()
     .then(() => {
-        // Local type aliases for clarity
-        type IncomingReq = import("http").IncomingMessage;
-        type ServerRes = import("http").ServerResponse;
-        type ListenCallback = (err?: unknown) => void;
-
-        createServer((req: IncomingReq, res: ServerRes) => {
+        createServer((req, res) => {
             handle(req, res); // Handle the requests
-        }).listen(port, ((err?: unknown) => {
+        }).listen(port, (err) => {
             if (err) throw err;
             console.log(`> Ready on http://localhost:${port}`); // Log that the server is ready
-        }) as ListenCallback);
+        });
     })
     .catch((err) => {
         console.error("Error starting server:", err); // Log any errors
