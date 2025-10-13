@@ -6,6 +6,7 @@ import { useRef } from "react"
 import { ArrowRight, Building2, Users, TrendingUp } from "lucide-react"
 import { luxury } from "@/assets/inedex"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,6 +44,7 @@ const featureVariants = {
 export default function EmperorProjectSection() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-50px" })
+    const route = useRouter()
 
     const features = [
         {
@@ -124,6 +126,7 @@ export default function EmperorProjectSection() {
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
+                                    onClick={() => route.push('/contact')}
                                     className="inline-flex items-center space-x-2 bg-neutral-900 text-[#D3B88F] px-8 py-4 hover:bg-neutral-800 transition-colors duration-300 group"
                                 >
                                     <span className="font-medium">Explore The Emperor</span>
