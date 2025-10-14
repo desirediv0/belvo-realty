@@ -35,7 +35,7 @@ export default function AboutPage() {
                 heading={<><span>ABOUT US</span></>}
                 subtitle={<span>Discover the legacy and vision behind Belvo Realty — where craft meets comfort.</span>}
                 breadcrumb={[{ label: "Home", href: "/" }, { label: "About", href: "/about" }]}
-                background={{ type: 'video', src: '/aboutvideo.mp4' }}
+                background={{ type: 'video', src: 'https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/aboutvideo.mp4' }}
             />
 
             <section className="py-16 bg-white text-black relative overflow-hidden">
@@ -57,7 +57,6 @@ export default function AboutPage() {
                             heading="ABOUT BELVO"
                             subheadingfirstline="CRAFTED"
                             subheadingsecondline="FOR LIVING"
-                            description="Blends modern architecture, sustainable practices and premium amenities to create homes and investments that stand the test of time."
                         />
 
                         {/* Introduction */}
@@ -235,30 +234,30 @@ export default function AboutPage() {
 
                         {/* What We Do */}
                         <motion.div variants={itemVariants} className="mb-16">
-                            <h3 className="text-2xl font-bold mb-8 text-center">What We Do</h3>
+                            <h3 className="text-4xl font-bold mb-8 text-center">What We Do</h3>
                             <div className="grid md:grid-cols-3 gap-6">
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
                                     <div className="w-12 h-12 bg-[#AA8453] text-white flex items-center justify-center mb-4">
                                         <Target className="w-6 h-6" />
                                     </div>
-                                    <h4 className="font-semibold mb-2">Market Analysis & Strategy</h4>
-                                    <p className="text-sm text-gray-600">Comprehensive market research and strategic planning backed by years of developer-side insights.</p>
+                                    <h4 className="font-semibold mb-2 text-xl">Market Analysis & Strategy</h4>
+                                    <p className=" text-gray-600">Comprehensive market research and strategic planning backed by years of developer-side insights.</p>
                                 </div>
 
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
                                     <div className="w-12 h-12 bg-[#AA8453] text-white flex items-center justify-center mb-4">
                                         <Users className="w-6 h-6" />
                                     </div>
-                                    <h4 className="font-semibold mb-2">Property Advisory</h4>
-                                    <p className="text-sm text-gray-600">Expert guidance on residential and commercial properties with transparent communication throughout.</p>
+                                    <h4 className="font-semibold mb-2 text-xl">Property Advisory</h4>
+                                    <p className=" text-gray-600">Expert guidance on residential and commercial properties with transparent communication throughout.</p>
                                 </div>
 
                                 <div className="p-6 border border-black bg-white hover:shadow transition">
                                     <div className="w-12 h-12 bg-[#AA8453] text-white flex items-center justify-center mb-4">
                                         <Heart className="w-6 h-6" />
                                     </div>
-                                    <h4 className="font-semibold mb-2">Investment Solutions</h4>
-                                    <p className="text-sm text-gray-600">Tailored investment strategies that maximize returns while minimizing risks in the real estate market.</p>
+                                    <h4 className="font-semibold mb-2 text-xl">Investment Solutions</h4>
+                                    <p className=" text-gray-600">Tailored investment strategies that maximize returns while minimizing risks in the real estate market.</p>
                                 </div>
                             </div>
                         </motion.div>

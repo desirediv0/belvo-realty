@@ -106,6 +106,7 @@ export default function LuxuryVisionSection() {
                                 width={1200}
                                 height={1600}
                                 priority={false}
+                                loading="lazy"
                             />
                         </div>
                         <div className="mt-4 text-sm text-slate-600">Experience designs inspired by global best practices.</div>

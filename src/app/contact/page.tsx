@@ -116,7 +116,7 @@ export default function ContactPage() {
 
                         <motion.div variants={item} className="order-2 lg:order-2 flex items-center justify-center">
                             <div className="w-full max-w-md rounded-lg overflow-hidden shadow">
-                                <Image src={luxury} alt="Belvo Realty" width={800} height={600} className="object-cover w-full h-full" />
+                                <Image src={luxury} alt="Belvo Realty" width={800} height={600} className="object-cover w-full h-full" loading="lazy" />
                             </div>
                         </motion.div>
 

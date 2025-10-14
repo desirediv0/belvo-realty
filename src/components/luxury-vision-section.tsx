@@ -138,6 +138,7 @@ export default function LuxuryVisionSection() {
                                 fill
                                 className="object-cover object-top transition-all duration-700 group-hover:scale-105 group-hover:brightness-110"
                                 priority={false}
+                                loading="lazy"
                             />
 
                             {/* Overlay gradients */}

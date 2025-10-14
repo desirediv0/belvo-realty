@@ -151,7 +151,7 @@ export default function StatisticsSection() {
                                 </div>
                                 <div className="text-left">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                                        with a client-first approach, deep market expersise, and access to top developers, we deliver transparent transaction, export guidance, premium opportunitie.
+                                        With a client-first approach, deep market expertise, and access to top developers, we deliver transparent transactions, expert guidance, and premium opportunities.
                                     </p>
                                 </div>
                             </div>

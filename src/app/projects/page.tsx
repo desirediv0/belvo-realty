@@ -257,6 +257,7 @@ export default function ProjectsPage() {
                                             fill
                                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                             className="object-cover transition-all duration-700 group-hover:scale-110"
+                                            loading="lazy"
                                         />
                                         {/* overlays */}
                                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
@@ -349,6 +350,7 @@ export default function ProjectsPage() {
                                             width={1200}
                                             height={800}
                                             className="object-contain max-h-full w-auto md:w-full"
+                                            loading="lazy"
                                         />
                                     </div>
                                 </div>

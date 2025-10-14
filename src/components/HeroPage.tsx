@@ -16,7 +16,7 @@ function HeroPage({
     subtitle,
 
     minHeight = "80vh",
-    background = { type: 'video', src: '/desktop-banner.mp4' },
+    background = { type: 'video', src: 'https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/aboutvideo.mp4' },
     breadcrumb = [{ label: 'Home', href: '/' }],
 }: HeroPageProps) {
     const defaultHeading = (
@@ -41,7 +41,7 @@ function HeroPage({
                 {/* Background */}
                 {background.type === 'video' ? (
                     <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
-                        <source src={background.src ?? '/desktop-banner.webm'} type="video/webm" />
+                        <source src={background.src ?? 'https://desirediv-storage.blr1.cdn.digitaloceanspaces.com/belvo/aboutvideo.mp4'} type="video/mp4" />
                     </video>
                 ) : (
                     <div
