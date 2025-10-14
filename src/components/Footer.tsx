@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin, Twitter, } from "lucide-react"
+import { Facebook, Instagram, Linkedin } from "lucide-react"
 
 interface FooterLink {
     label: string
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
     // Only keep real pages that are present in the navbar
     const footerSections: FooterSection[] = [
         {
-            title: "PAGES",
+            title: "QUICK LINKS",
             links: [
                 { label: "Home", href: "/" },
                 { label: "About Us", href: "/about" },
@@ -53,10 +53,9 @@ const Footer: React.FC = () => {
     ]
 
     const socialLinks = [
-        { icon: Facebook, href: "#", label: "Facebook" },
-        { icon: Instagram, href: "#", label: "Instagram" },
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
-        { icon: Twitter, href: "#", label: "Twitter" },
+        { icon: Facebook, href: "https://www.facebook.com/share/1GfX6dEyVc", label: "Facebook" },
+        { icon: Instagram, href: "https://www.instagram.com/belvorealty", label: "Instagram" },
+        { icon: Linkedin, href: "https://www.linkedin.com/company/belvorealty", label: "LinkedIn" },
     ]
 
     return (
@@ -80,6 +79,20 @@ const Footer: React.FC = () => {
                 <div className="py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+
+
+                            {/* Contact Info (kept real) */}
+                            <motion.div variants={itemVariants}>
+                                <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">CONTACT
+                                    <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
+                                </h3>
+                                <div className="space-y-3 text-sm text-gray-200">
+                                    <div>649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</div>
+                                    <div><a href="tel:+919090939193" className="hover:text-[#AA8453]">+91 9090 939193</a></div>
+                                    <div><a href="mailto:hello@belvorealty.com" className="hover:text-[#AA8453]">hello@belvorealty.com</a></div>
+                                </div>
+                            </motion.div>
+
                             {/* Pages */}
                             <motion.div variants={itemVariants}>
                                 <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">{footerSections[0].title}
@@ -96,18 +109,6 @@ const Footer: React.FC = () => {
                                 </ul>
                             </motion.div>
 
-                            {/* Contact Info (kept real) */}
-                            <motion.div variants={itemVariants}>
-                                <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">CONTACT
-                                    <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gradient-to-r from-[#AA8453] to-black" />
-                                </h3>
-                                <div className="space-y-3 text-sm text-gray-200">
-                                    <div>649, Satya The Hive, Sector 102, Gurugram, Haryana- 122505</div>
-                                    <div><a href="tel:+919090939193" className="hover:text-[#AA8453]">+91 9090 939193</a></div>
-                                    <div><a href="mailto:hello@belvorealty.com" className="hover:text-[#AA8453]">hello@belvorealty.com</a></div>
-                                </div>
-                            </motion.div>
-
                             {/* Social */}
                             <motion.div variants={itemVariants}>
                                 <h3 className="text-lg font-semibold mb-6 text-[#AA8453] relative">FOLLOW US
@@ -119,6 +120,7 @@ const Footer: React.FC = () => {
                                             key={social.label}
                                             href={social.href}
                                             whileHover={{ scale: 1.05 }}
+                                            target="_black"
                                             className="w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center hover:bg-[#AA8453] transition-all duration-300"
                                             aria-label={social.label}
                                         >
