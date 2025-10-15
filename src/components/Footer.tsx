@@ -3,6 +3,8 @@
 import type React from "react"
 import { motion } from "framer-motion"
 import { Facebook, Instagram, Linkedin } from "lucide-react"
+import { BsTwitterX } from "react-icons/bs";
+
 
 interface FooterLink {
     label: string
@@ -56,6 +58,7 @@ const Footer: React.FC = () => {
         { icon: Facebook, href: "https://www.facebook.com/share/1GfX6dEyVc", label: "Facebook" },
         { icon: Instagram, href: "https://www.instagram.com/belvorealty", label: "Instagram" },
         { icon: Linkedin, href: "https://www.linkedin.com/company/belvorealty", label: "LinkedIn" },
+        { icon: BsTwitterX, href: "https://x.com/belvorealty?s=11&t=c7syQI8PzqS0akTI-ndR5w", label: "Twitter" },
     ]
 
     return (

@@ -83,7 +83,7 @@ export default function StatisticsSection() {
                         {[
                             { display: 100, suffix: '%', label: 'CLIENT CENTRIC APPROACH' },
                             { display: 'EXCLUSIVE DEVELOPER', suffix: '', label: 'PARTNERSHIPS' },
-                            { display: 'End to End', suffix: '', label: 'PROPERTY JOLUTION' },
+                            { display: 'End to End', suffix: '', label: 'PROPERTY SOLUTION' },
                         ].map((s: { display: number | string; suffix?: string; label: string }, i: number) => (
                             <motion.div
                                 key={i}
@@ -102,7 +102,7 @@ export default function StatisticsSection() {
 
                                     </div>
 
-                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-medium text-[#AA8453] mb-4  tracking-wider">
+                                    <div className="text-lg md:text-4xl  text-center md:text-left  font-medium text-[#AA8453] mb-4  ">
                                         {typeof s.display === 'number' ? (
                                             <CountUpNumber end={s.display as number} suffix={s.suffix || ''} />
                                         ) : (
@@ -110,7 +110,7 @@ export default function StatisticsSection() {
                                         )}
                                     </div>
 
-                                    <p className="text-[#AA8453] opacity-90 font-medium text-xs md:text-lg tracking-wide uppercase text-center md:text-left ">{s.label}</p>
+                                    <p className="text-[#AA8453] opacity-90 font-medium text-xs md:text-lg  uppercase text-center md:text-left ">{s.label}</p>
                                 </div>
                             </motion.div>
                         ))}

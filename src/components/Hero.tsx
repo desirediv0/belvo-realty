@@ -81,7 +81,7 @@ const Hero = () => {
                     </div>
                     <div className="hidden sm:block w-px h-8 bg-white/30" />
                     <div>
-                        <div className="libreCaslonDisplay text-2xl font-normal text-white uppercase">
+                        <div className=" text-2xl font-normal text-white uppercase tracking-wider">
                             Gurgaon
                         </div>
                         <div className=" text-white/70 text-2xl uppercase tracking-wider">
