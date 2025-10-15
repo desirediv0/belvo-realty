@@ -132,7 +132,7 @@ const projects: Project[] = [
     {
         id: 7,
         order: 7,
-        title: "Experion — The Trillium",
+        title: "Experion — The Trillion",
         location: "Sector 48, Sohna Road",
         type: "Residential",
         status: "Under Construction",
