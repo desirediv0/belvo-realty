@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Award, Users, Target, Eye, Heart, Phone, Calendar, Shield, TrendingUp } from "lucide-react"
 import HeroPage from "@/components/HeroPage"
 import HeadText from "@/components/Head-text"
+import Image from "next/image"
+import { bhoomikasinghverma, raviverma } from "@/assets/inedex"
 
 export default function AboutPage() {
     const containerVariants: Variants = {
@@ -86,9 +88,10 @@ export default function AboutPage() {
                                     className="p-8 border border-black bg-white hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start gap-6 mb-6">
-                                        <div className="w-20 h-20 bg-[#AA8453] text-white flex items-center justify-center text-2xl font-bold">
-                                            RV
+                                        <div className="w-32 h-32 overflow-hidden border-4 border-[#AA8453] flex items-center justify-center">
+                                            <Image src={raviverma} alt="Ravi Verma" width={200} height={200} className="w-32 h-32 object-cover object-right-bottom scale-150" />
                                         </div>
+
                                         <div className="flex-1">
                                             <h3 className="text-2xl font-bold mb-2 text-black">Ravi Verma</h3>
                                             <div className="flex items-center gap-2 text-black font-medium mb-4">
@@ -117,8 +120,8 @@ export default function AboutPage() {
                                     className="p-8 border border-black bg-white hover:shadow-xl transition-all duration-300"
                                 >
                                     <div className="flex items-start gap-6 mb-6">
-                                        <div className="w-20 h-20 bg-[#AA8453] text-white flex items-center justify-center text-xl font-bold">
-                                            BSV
+                                        <div className="w-32 h-32 overflow-hidden border-4 border-[#AA8453] flex items-center justify-center">
+                                            <Image src={bhoomikasinghverma} alt="Bhoomika Singh Verma" width={200} height={200} className="w-32 h-32 object-cover object-right-bottom scale-150" />
                                         </div>
                                         <div className="flex-1">
                                             <h3 className="text-2xl font-bold mb-2 text-black">Bhoomika Singh Verma</h3>

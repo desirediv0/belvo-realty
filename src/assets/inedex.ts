@@ -18,4 +18,8 @@ import omaxechandnichowk from "./project/omaxe-chandni-chowk.jpeg";
 import omaxedwarka from "./project/omaxe-dwarka.jpg";
 import adani from "./project/adani.jpeg";
 
-export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop, godrej, hero, Elan, dlf, experion, max, omaxechandnichowk, omaxedwarka, adani };
+// Founders
+import raviverma from "./raviverma.jpeg"
+import bhoomikasinghverma from "./bhoomikasinghverma.jpeg"
+
+export { logo, modernluxuryrealestateofficeinteriorwithmar, ShowcaseSection, luxury, luxury2, luxuryvisiondesktop, godrej, hero, Elan, dlf, experion, max, omaxechandnichowk, omaxedwarka, adani, raviverma, bhoomikasinghverma };
